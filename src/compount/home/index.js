@@ -1,0 +1,1 @@
+import img1 from "../swipers/swp/swp7.jpg"
