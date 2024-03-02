@@ -14,6 +14,7 @@ import { NavLink, Link } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "./home/hImg/logo.png";
+import shadows from "@mui/material/styles/shadows";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -38,10 +39,11 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" className="
+    shadow-indigo-500/40 ">
       <Container maxWidth="xl" className="bg-white">
         <Toolbar disableGutters>
-          <img className="w-12 h-9" src={logo} alt="" />
+          <img className="w-12 h-9 bg-white" src={logo} alt="" />
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"

@@ -14,6 +14,11 @@ import swpImg7 from "../swipers/swp/nike-just-do-it (20).jpg"
 import swpImg8 from "../swipers/swp/nike-just-do-it (21).jpg"
 import swpImg9 from "../swipers/swp/nike-just-do-it (22).jpg"
 import swpImg10 from "../swipers/swp/nike-just-do-it (23).jpg"
+import swpImg11 from "../swipers/swp/nike-just-do-it (24).jpg"
+import swpImg12 from "../swipers/swp/nike-just-do-it (25).jpg"
+
+import Swiper3 from "../swipers/Swiper3";
+import Swiper4 from "../swipers/Swiper4";
 
 
 export default function Home() {
@@ -28,10 +33,13 @@ export default function Home() {
   let img8 = swpImg8
   let img9 = swpImg9
   let img10 = swpImg10
+  let img11 = swpImg11
+  let img12 = swpImg12
+
   return (
     <>
-      <div className="w-100% flex flex-col items-center">
-        <div className="pt-10">
+      <div className="w-100% flex flex-col items-center pt-40 ">
+        <div className="">
           <img src={homeImg} alt="" />
         </div>
         <div className="w-1/2  h-96 text-center">
@@ -91,9 +99,12 @@ export default function Home() {
         <h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
         <Swiper2/>
         <h2 className="font-semibold text-[26px] p-10">Shop by Sport </h2>
-        <Swiper1 img1={img5} img2={img7}
-        img3={img6} img4={img8} img5={img5} img6={img8}/>
+        <Swiper3 img1={img5} img2={img6}
+        img3={img7} img4={img8} img5={img9} img6={img10} img7={img12}/>
+                <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
+                <Swiper4 />
       </div>
+
     </>
   );
 }
