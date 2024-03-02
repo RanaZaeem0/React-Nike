@@ -42,8 +42,8 @@ export default function Home() {
         <div className="">
           <img src={homeImg} alt="" />
         </div>
-        <div className="w-1/2  h-96 text-center">
-          <h1 className=" text-6xl font-black">JORDAN EVERDAY STAPLES</h1>
+        <div className="w-1/2  h-96 text-center max-sm:text-start">
+          <h1 className=" text-6xl max-sm:text-4xl font-black">JORDAN EVERDAY STAPLES</h1>
           <p className="pt-4 pb-4">
             Style and legacy come together in the latest collection
           </p>
@@ -60,9 +60,10 @@ export default function Home() {
         img3={img3} img4={img4}/>
       </div>
       <h1 className="text-3xl p-5 font-semibold ">Featured</h1>
-      <div className="w-100%  h-[100vh] relative flex  items-center justify-evenly">
-        <div className="w-[48%] h-3/4 border relative ">
-          <img src={hImg1} alt="" />
+      <div className="w-100%  h-[100vh] relative flex max-sm:flex-col  items-center justify-evenly">
+        <div className="w-[48%] 
+        max-sm:w-[90%] h-3/4  relative ">
+          <img className="max-sm:h-[100%]" src={hImg1} alt="" />
           <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
@@ -77,7 +78,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[48%] h-3/4 border relative ">
+        <div className="w-[48%] 
+        max-sm:w-[90%]
+        h-3/4  relative ">
           <img src={hImg2} alt="" />
           <div
             className="flex flex-col  

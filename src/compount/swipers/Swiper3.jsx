@@ -15,7 +15,7 @@ export default function Swiper3({img1,img2,img3,img4
 
   return (
     <Swiper
-    className='h-[90vh] '
+    className=' '
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}

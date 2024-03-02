@@ -5,9 +5,9 @@ export default function Footer() {
     <>
     <div
       className="text-white bg-black w-100%
-      h-96 flex justify-between pr-6" 
+      flex justify-between pr-6" 
       >
-      <div className="pl-10 text-white flex pt-10 items-start justify-start">
+      <div className="pl-10 text-white flex max-sm:flex-col  pt-10 items-start justify-start ">
         <div className="leading-8 font-semibold cursor-pointer">
           <h4 >Resources</h4>
           <h4>Gift Cards</h4>

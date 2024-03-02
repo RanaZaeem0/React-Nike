@@ -26,7 +26,7 @@ import swpImg12 from "./swp/swp4 (7).png"
 export default function Swiper4() {
   return (
     <Swiper
-    className='h-[100vh]  cursor-pointer'
+    className=' cursor-pointer'
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
