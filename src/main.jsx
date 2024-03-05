@@ -6,7 +6,7 @@ import Home from "./compount/home/Home.jsx"
 import Layout from "./Layout.jsx"
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Woman from './compount/Woman.jsx'
-import Man from './compount/Man.jsx'
+import Man from './compount/Man/Man.jsx'
 import New from "./compount/New.jsx"
 import Sales from './compount/Sales.jsx'
 import Kids from './compount/Kids.jsx'

@@ -6,27 +6,38 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useState } from 'react';
 
 export default function Swiper3({img1,img2,img3,img4
 ,img5,img6,img7}) {
 
-
+  let [swpImg,setSwpImg] = useState(3.2)
+  const observer = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      console.log('Window width changed:', entry.contentRect.width);
+      if(entry.contentRect.width < 786){
+  setSwpImg(1.5)
+    }
+    }
+  });
+  
+  observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
  
 
   return (
     <Swiper
-    className=' '
+    className=' pb-10'
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={3.2}
+      slidesPerView={swpImg}
       navigation
     //   pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>
+      <SwiperSlide className='pb-10'>
         <img src={img1} alt="" />
         <h2 className='pl-6 text-xl font-semibold'>Basketball</h2>
       

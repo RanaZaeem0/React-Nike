@@ -15,20 +15,32 @@ import swpImg9 from "./swp/swp9.jpg"
 import swpImg11 from "./swp/swp11.jpg"
 
 
-
+import { useState } from 'react';
 
 
 
 
 
 export default function Swiper2() {
+
+  let [swpImg,setSwpImg] = useState(3)
+  const observer = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      console.log('Window width changed:', entry.contentRect.width);
+      if(entry.contentRect.width < 786){
+  setSwpImg(1.5)
+    }
+    }
+  });
+  
+  observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
   return (
     <Swiper
-    className='cursor-pointer'
+    className='cursor-pointer pt-10 pb-10'
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={4}
+      slidesPerView={swpImg}
       navigation
       // pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}

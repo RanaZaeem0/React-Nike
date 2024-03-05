@@ -14,7 +14,7 @@ import swpImg1 from "./swp/swp4 (8).png"
 import swpImg9 from "./swp/swp4 (5).png"
 import swpImg11 from "./swp/swp4 (6).png"
 import swpImg12 from "./swp/swp4 (7).png"
-
+import { useState } from 'react';
 
 
 
@@ -24,13 +24,24 @@ import swpImg12 from "./swp/swp4 (7).png"
 
 
 export default function Swiper4() {
+  let [swpImg,setSwpImg] = useState(3)
+  const observer = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      console.log('Window width changed:', entry.contentRect.width);
+      if(entry.contentRect.width < 786){
+  setSwpImg(1.5)
+    }
+    }
+  });
+  
+  observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
   return (
     <Swiper
     className=' cursor-pointer'
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={3}
+      slidesPerView={swpImg}
       
       navigation
     //   pagination={{ clickable: true }}
@@ -38,7 +49,7 @@ export default function Swiper4() {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className=''>
+      <SwiperSlide className='pb-10'>
         <img src={swpImg1} alt="" />
         <div className="pl-1">
         <h2 className='font-semibold'>Nike Dunk Low Retro</h2>

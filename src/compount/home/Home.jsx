@@ -19,7 +19,9 @@ import swpImg12 from "../swipers/swp/nike-just-do-it (25).jpg"
 
 import Swiper3 from "../swipers/Swiper3";
 import Swiper4 from "../swipers/Swiper4";
-
+import mHome from "./hImg/m-home.jpg"
+import { useState } from "react";
+import Swiper5 from "../swipers/Swiper5";
 
 export default function Home() {
 
@@ -36,13 +38,26 @@ export default function Home() {
   let img11 = swpImg11
   let img12 = swpImg12
 
+  let [homemg,setHomeImg] = useState(homeImg)
+  const observer = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      console.log('Window width changed:', entry.contentRect.width);
+      if(entry.contentRect.width < 786){
+  setHomeImg(mHome)
+    }
+    }
+  });
+  
+  observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
+  
+
   return (
     <>
-      <div className="w-100% flex flex-col items-center pt-40 ">
+      <div className="w-100% flex flex-col items-center max-sm:items-start  ">
         <div className="">
-          <img src={homeImg} alt="" />
+          <img  src={homemg} alt="" />
         </div>
-        <div className="w-1/2  h-96 text-center max-sm:text-start">
+        <div className="w-1/2  h-96 text-center max-sm:pl-4d:\web\Saylkani new\nike\nike\img\logo.png">
           <h1 className=" text-6xl max-sm:text-4xl font-black">JORDAN EVERDAY STAPLES</h1>
           <p className="pt-4 pb-4">
             Style and legacy come together in the latest collection
@@ -60,8 +75,8 @@ export default function Home() {
         img3={img3} img4={img4}/>
       </div>
       <h1 className="text-3xl p-5 font-semibold ">Featured</h1>
-      <div className="w-100%  h-[100vh] relative flex max-sm:flex-col  items-center justify-evenly">
-        <div className="w-[48%] 
+      <div className="w-100%  h-[100vh] max-sm:gap-10 relative flex max-sm:flex-col  items-center justify-evenly">
+        <div className="w-[48%]  
         max-sm:w-[90%] h-3/4  relative ">
           <img className="max-sm:h-[100%]" src={hImg1} alt="" />
           <div
@@ -105,7 +120,11 @@ export default function Home() {
         <Swiper3 img1={img5} img2={img6}
         img3={img7} img4={img8} img5={img9} img6={img10} img7={img12}/>
                 <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
-                <Swiper4 />
+                <Swiper4  />
+      </div>
+      <div className="pt-12 pb-10 pl-1">
+      <h2 className="font-semibold text-[26px] p-10">Member Benefits</h2>
+        <Swiper5/>
       </div>
 
     </>
