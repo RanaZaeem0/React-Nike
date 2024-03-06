@@ -14,7 +14,7 @@ export default function Footer() {
           <h4>Find a Store</h4>
           <h4>Become a Member</h4>
           <h4>Nike x NBA</h4>
-          <h4>Nike Journal</h4>
+          <h4>Nike Journal</h4> 
           <h4>Site Feedback</h4>
         </div>
         {/* <hr  className="border-gray-50 border-spacing-y-10" /> */}

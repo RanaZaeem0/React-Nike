@@ -13,10 +13,20 @@ import Tooltip from "@mui/material/Tooltip";
 import { NavLink, Link } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+
+
+import { styled, alpha } from '@mui/material/styles';
+
+import SearchIcon from '@mui/icons-material/Search';
+
+
+
 import nav1 from "./nav.png";
+
 
 import logo from "./logo.png";
 import shadows from "@mui/material/styles/shadows";
+import { InputBase, Paper } from "@mui/material";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -42,16 +52,16 @@ function Header() {
 
   return (
     <>
-      <div className="w-100% flex  justify-between items-center bg-white h-10 ">
-        <div className="">
-          <img className="w-8 h-8" src={nav1} alt="" />
+      <div className=" w-100% flex max-sm:hidden  justify-between items-center bg-white h-10 ">
+        <div className=" pl-10" >
+          <img className="w-8 h-8 " src={nav1} alt="" />
         </div>
-        <div className="flex">
-          <h2>Find a store |</h2>
+        <div className="flex pr-10">
+          <h4 className="text-sm font-semibold">Find a store | &nbsp;</h4>
 
-          <h2>Help |</h2>
-          <h2>Join us |</h2>
-          <h2>Sign in</h2>
+          <h4  className="text-sm font-semibold"> Help |&nbsp; </h4>
+          <h4  className="text-sm font-semibold"> Join us | &nbsp;</h4>
+          <h4  className="text-sm font-semibold"> Sign in</h4>
         </div>
       </div>
       <AppBar
@@ -61,8 +71,9 @@ function Header() {
       >
         <Container maxWidth="xl" className="bg-white">
           <Toolbar disableGutters>
-            <img className="w-16 h-12 bg-white" src={logo} alt="" />
+            <img className="w-18 h-14 bg-white" src={logo} alt="" />
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+        
             <Typography
               variant="h5"
               noWrap
@@ -81,7 +92,7 @@ function Header() {
             ></Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <nav
-                className="w-5/6 flex items-center justify-center 
+                className="w-4/5  flex items-end justify-end
             
             "
               >
@@ -147,6 +158,26 @@ function Header() {
                 </NavLink>
               </nav>
             </Box>
+            <Paper className="!rounded-3xl  max-sm:!pl-0 !pl-5  !bg-gray-200 !shadow-none ">
+              <a href=""><i className="fa-solid fa-magnifying-glass"></i> </a>
+            <InputBase
+             className="max-sm:!hidden "
+             placeholder="Search .."
+             >
+              <IconButton className="bg-red-900"></IconButton>
+               <SearchIcon/>
+            </InputBase>
+           </Paper>
+           <NavLink className=" ">
+
+           <a href="" className="text-black pl-4 pr-2 text-lg ">
+          <i className="fa-regular fa-heart"></i>
+          </a>
+          <a href="" className="text-black pl-4 pr-2 text-lg ">
+          <i className="fa-solid fa-bag-shopping"></i>
+          </a>
+           </NavLink>
+      
 
             <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
               <IconButton

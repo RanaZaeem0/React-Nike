@@ -49,7 +49,7 @@ export default function Swiper4() {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className='pb-10'>
+      <SwiperSlide className='pb-10 ml-10'>
         <img src={swpImg1} alt="" />
         <div className="pl-1">
         <h2 className='font-semibold'>Nike Dunk Low Retro</h2>

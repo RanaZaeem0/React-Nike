@@ -30,7 +30,7 @@ export default function Swiper5() {
 
   return (
     <Swiper
-      className=" "
+      className="mb-10  "
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
@@ -41,7 +41,7 @@ export default function Swiper5() {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      <SwiperSlide>
+      <SwiperSlide className="ml-12">
         <img src={img1} alt="" />
         <div
           className=" absolute  text-white bottom-2

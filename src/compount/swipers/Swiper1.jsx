@@ -20,6 +20,8 @@ export default function Swiper1({img1,img2,img3,img4}) {
     }
     }
   });
+
+
   
   observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
   
@@ -51,7 +53,7 @@ export default function Swiper1({img1,img2,img3,img4}) {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className='pb-10'>
+      <SwiperSlide className='pb-10 ml-12'>
         <img src={img1} alt="" />
       
       </SwiperSlide>

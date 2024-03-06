@@ -37,7 +37,7 @@ export default function Swiper3({img1,img2,img3,img4
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className='pb-10'>
+      <SwiperSlide className='pb-10 ml-12'>
         <img src={img1} alt="" />
         <h2 className='pl-6 text-xl font-semibold'>Basketball</h2>
       
