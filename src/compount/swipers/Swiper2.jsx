@@ -21,33 +21,25 @@ import { useState } from 'react';
 
 
 
-export default function Swiper2() {
+export default function Swiper2({veiw}) {
 
-  let [swpImg,setSwpImg] = useState(3)
-  const observer = new ResizeObserver(entries => {
-    for (let entry of entries) {
-      console.log('Window width changed:', entry.contentRect.width);
-      if(entry.contentRect.width < 786){
-  setSwpImg(1.5)
-    }
-    }
-  });
-  
-  observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
+
+ 
+
   return (
     <Swiper
     className='cursor-pointer pt-10 pb-10'
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={swpImg}
+      slidesPerView={veiw}
       navigation
       // pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>
+      <SwiperSlide className='max-sm:ml-4 '>
         <img src={swpImg8} alt="" />
       
       </SwiperSlide>

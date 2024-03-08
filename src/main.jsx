@@ -12,6 +12,7 @@ import Sales from './compount/Sales.jsx'
 import Kids from './compount/Kids.jsx'
 
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>

@@ -7,12 +7,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useState } from 'react';
+import es1  from "./swp/man (3).jpg"
+import es2  from "./swp/man (4).jpg"
+import es3  from "./swp/man (2).jpg"
 
-export default function Swiper1({img1,img2,img3,img4,veiw}) {
+
+export default function Swiper1() {
+
+ 
 
 
-
-
+  
 
 
 
@@ -23,28 +28,25 @@ export default function Swiper1({img1,img2,img3,img4,veiw}) {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={veiw}
+      slidesPerView={3.2}
       navigation
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className='pb-10 ml-12 max-sm:ml-4 ' >
-        <img src={img1} alt="" />
+      <SwiperSlide className=''>
+        <img src={es1} alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img2} alt="" />
+        <img src={es2} alt="" />
       
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={img3} alt="" />
-      
+      <SwiperSlide className="" >
+        <img src={es3} alt="" />
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={img4} alt="" />
-      </SwiperSlide>
+ 
     
     </Swiper>
   )

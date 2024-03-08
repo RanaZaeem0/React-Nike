@@ -1,5 +1,7 @@
 import { useState } from "react";
 import index from "./index";
+import Siper6 from "../swipers/Siper6"
+import { SwapCalls } from "@mui/icons-material";
 
 export default function Man() {
   let [homemg, setHomeImg] = useState(index.dHome);
@@ -53,7 +55,7 @@ export default function Man() {
         >
           Shop the Essentails{" "}
         </h2>
-      <div className="w-100% flex items-center justify-evenly gap-10 ">
+      {/* <div className="w-100% flex items-center justify-evenly gap-10 ">
       
         <div className="pl-10">
           <img src={index.es1} alt="" />
@@ -69,10 +71,9 @@ export default function Man() {
           <h2 className="font-semibold text-xl">Accessories</h2>
 
         </div>
-
-        {/* <index.Swiper1 img1={img1} img2={img2}
-      img3={img3} img4={img4}/> */}
-      </div>
+<Siper6/>
+      </div> */}
+      {/* <Siper6/> */}
 
       <h1 className="text-3xl p-5 font-semibold ">Just In</h1>
       <div className="w-100%   relative flex max-sm:flex-col  items-center justify-evenly pb-10">
@@ -121,7 +122,7 @@ export default function Man() {
         </div>
       </div>
       <div className="w-100% pl-2">
-        <index.Swiper2 />
+        {/* <index.Swiper2 /> */}
       </div>
       <h2
         className="
@@ -148,9 +149,9 @@ export default function Man() {
       </div>
       <div className="w-100% pl-2">
         <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
-        <index.Swiper4 />
+        {/* <index.Swiper4 /> */}
         <h2 className="font-semibold text-[26px] p-10">Member Benefits</h2>
-        <index.Swiper5 />
+        {/* <index.Swiper5 /> */}
       </div>
     </>
   );

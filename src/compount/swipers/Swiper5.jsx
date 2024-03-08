@@ -15,18 +15,10 @@ import img5 from "./swp/nike-just-do-it (28).jpg";
 import img6 from "./swp/nike-just-do-it (12).jpg";
 import img7 from "./swp/nike-just-do-it (13).jpg";
 
-export default function Swiper5() {
-  let [swpImg, setSwpImg] = useState(3.2);
-  const observer = new ResizeObserver((entries) => {
-    for (let entry of entries) {
-      console.log("Window width changed:", entry.contentRect.width);
-      if (entry.contentRect.width < 786) {
-        setSwpImg(1.5);
-      }
-    }
-  });
+export default function Swiper5({veiw}) {
 
-  observer.observe(document.documentElement); // Observing changes to the root element (HTML element)
+
+
 
   return (
     <Swiper
@@ -34,14 +26,14 @@ export default function Swiper5() {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={swpImg}
+      slidesPerView={veiw}
       navigation
       //   pagination={{ clickable: true }}
       //   scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      <SwiperSlide className="ml-12">
+      <SwiperSlide className="ml-12 max-sm:ml-4">
         <img src={img1} alt="" />
         <div
           className=" absolute  text-white bottom-2
