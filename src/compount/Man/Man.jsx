@@ -1,29 +1,57 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import index from "./index";
-import Siper6 from "../swipers/Siper6"
-import { SwapCalls } from "@mui/icons-material";
+import Swiper6 from "../swipers/Swiper6"
+
 
 export default function Man() {
-  let [homemg, setHomeImg] = useState(index.dHome);
-  const observer = new ResizeObserver((entries) => {
-    for (let entry of entries) {
-      console.log("Window width changed:", entry.contentRect.width);
-      if (entry.contentRect.width < 786) {
-        setHomeImg(index.manImg);
-      }
-    }
-  });
 
-  observer.observe(document.documentElement);
+let swp1Img1 = index.man4
+let swp1Img2 = index.man5
+let swp1Img3 = index.man6
+
+let swp2Img1  =  index.man1
+let swp2Img2  =  index.man2
+let swp2Img3  =  index.man3
+
+
+
+
+
+
+  const [view,setView] = useState(3.2)
+    let [homeImg,setHomeImg] = useState(index.dHome)
+  const [storeWeith,setstoreWeith] = useState(window.innerWidth)
+
+  const detectSize = ()=>{
+     setstoreWeith(window.innerWidth)
+               if(window.innerWidth < 960){
+                setHomeImg(index.mHome)
+                setView(1.3)
+
+               }else{
+                setHomeImg(index.dHome)
+                setView(3.2)
+               }
+ 
+    }
+  useEffect(() => {
+    window.addEventListener("resize", detectSize)
+  
+    return () => {
+    window.removeEventListener("resize", detectSize)
+      
+    }
+  }, [storeWeith])
+
 
   return (
     <>
       <div className="w-100%">
         <div
-          className="w-100% pt-20 flex items-center
+          className="w-100%  flex items-center
       justify-center"
         >
-          <img className="w-[90%]" src={homemg} alt="" />
+          <img className="w-[90%]" src={homeImg} alt="" />
         </div>
         <div className="w-100%  pb-10  text-center max-sm:pl-4">
           <h1 className=" max-sm:w-3/4 text-6xl max-sm:text-4xl font-black">
@@ -55,25 +83,30 @@ export default function Man() {
         >
           Shop the Essentails{" "}
         </h2>
-      {/* <div className="w-100% flex items-center justify-evenly gap-10 ">
+        {
+         storeWeith > 900 ?  
+         <div className="w-100% flex items-center justify-evenly gap-10 ">
       
-        <div className="pl-10">
-          <img src={index.es1} alt="" />
-          <h2 className="font-semibold text-xl">Clothing</h2>
-        </div>
-        <div className="">
-          <img src={index.es2} alt="" />
-          <h2 className="font-semibold text-xl">Shoes</h2>
+         <div className="pl-10">
+           <img src={index.man4} alt="" />
+           <h2 className="font-semibold text-xl">Clothing</h2>
+         </div>
+         <div className="">
+           <img src={index.man5} alt="" />
+           <h2 className="font-semibold text-xl">Shoes</h2>
+ 
+         </div>
+         <div className="pr-10">
+           <img src={index.man6} alt="" />
+           <h2 className="font-semibold text-xl">Accessories</h2>
+ 
+         </div>
+ 
+       </div>
+         :         <Swiper6  view={view} img1={swp1Img1}  img2={swp1Img2}img3={swp1Img3}/>
+        }
+  
 
-        </div>
-        <div className="pr-10">
-          <img src={index.es3} alt="" />
-          <h2 className="font-semibold text-xl">Accessories</h2>
-
-        </div>
-<Siper6/>
-      </div> */}
-      {/* <Siper6/> */}
 
       <h1 className="text-3xl p-5 font-semibold ">Just In</h1>
       <div className="w-100%   relative flex max-sm:flex-col  items-center justify-evenly pb-10">
@@ -130,7 +163,8 @@ export default function Man() {
       >
         More to Explore
       </h2>
-      <div className=" flex items-center justify-evenly  gap-8 w-100% pb-10">
+      {storeWeith > 1000 ? 
+        <div className=" flex items-center justify-evenly  gap-8 w-100% pb-10">
         <div className="pl-10 cursor-pointer ">
           <img className="" src={index.man1} alt="" />
           <h2 className="font-semibold text-xl">Air Force 107</h2>
@@ -147,6 +181,13 @@ export default function Man() {
           <h4 className="font-semibold pt-8 underline cursor-pointer">Shop</h4>
         </div>
       </div>
+      : 
+      <Swiper6 view=
+      {view}  img1={swp2Img1}
+      img2={swp2Img2}
+      img3={swp2Img3}/>
+}
+   
       <div className="w-100% pl-2">
         <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
         {/* <index.Swiper4 /> */}

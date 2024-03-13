@@ -35,7 +35,7 @@ export default function Swiper4({veiw}) {
       spaceBetween={10}
       slidesPerView={veiw}
       
-      navigation
+   
     //   pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}

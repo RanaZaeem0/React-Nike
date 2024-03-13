@@ -22,7 +22,7 @@ export default function Swiper3({img1,img2,img3,img4
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
       slidesPerView={veiw}
-      navigation
+    
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}

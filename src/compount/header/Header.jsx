@@ -27,6 +27,7 @@ import nav1 from "./nav.png";
 import logo from "./logo.png";
 import shadows from "@mui/material/styles/shadows";
 import { InputBase, Paper } from "@mui/material";
+import { useEffect } from "react";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -34,6 +35,40 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+  
+  let [inputWeith,setInputWeith] = React.useState(0)
+
+
+
+function handleEnterInputWeith(weith){
+
+setInputWeith(weith)
+console.log("enter");
+console.log(weith);
+}
+function handleLeaveInputWeith(weith){
+  setInputWeith(weith)
+  console.log("leaver");
+}
+let [navPostion,setNavPostion]= React.useState("fixed")
+let [weith,setWeith] = React.useState(window.innerHeight)
+
+function handleWieth(){
+  setWeith(window.innerWidth)
+}
+useEffect(()=>{
+if(weith < 900){
+setNavPostion("")
+}else{
+  setNavPostion("fixed")
+}
+
+},[weith])
+useEffect(()=>{
+  
+})
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -65,7 +100,7 @@ function Header() {
         </div>
       </div>
       <AppBar
-        position=""
+        position={navPostion}
         className="
     shadow-indigo-500/40 "
       >
@@ -160,17 +195,20 @@ function Header() {
             </Box>
             <Paper className="!rounded-3xl  max-sm:!pl-0 !pl-5  !bg-gray-200 !shadow-none ">
               <a href=""><i className="fa-solid fa-magnifying-glass"></i> </a>
+          { 
+       
+        
             <InputBase
-             className="max-sm:!hidden "
+            className="w-0"
              placeholder="Search .."
              >
-              <IconButton className="bg-red-900"></IconButton>
-               <SearchIcon/>
-            </InputBase>
+              {/* <IconButton className="bg-red-900"></IconButton> */}
+               {/* <SearchIcon/> */}
+            </InputBase>}
            </Paper>
            <NavLink className=" ">
 
-           <a href="" className="text-black pl-4 pr-2 text-lg ">
+           <a className="text-black pl-4 pr-2 text-lg ">
           <i className="fa-regular fa-heart"></i>
           </a>
           <a href="" className="text-black pl-4 pr-2 text-lg ">

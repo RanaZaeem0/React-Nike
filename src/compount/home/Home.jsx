@@ -44,7 +44,7 @@ let [view,setView] = useState(3.2)
      setstoreWeith(window.innerWidth)
                if(window.innerWidth < 960){
                 setHomeImg(index.mHome)
-                setView(1.3)
+                setView(1.4)
 
                }else{
                 setHomeImg(index.homeImg)
@@ -64,22 +64,16 @@ let [view,setView] = useState(3.2)
 
 
 
-
-
-
-
-
-
  // Observing changes to the root element (HTML element)
   
 
   return (
     <>
       <div className="w-100% flex flex-col items-center max-sm:items-start  ">
-        <div className="">
-          <img  src={homemg} alt="" />
+        <div className="w-100% flex items-center justify-center">
+          <img className="w-5/6"  src={homemg} alt="" />
         </div>
-        <div className="w-1/2  h-96 text-center max-sm:pl-4d:\web\Saylkani new\nike\nike\img\logo.png">
+        <div className="w-1/2   h-96 text-center max-sm:pl-4">
           <h1 className=" text-6xl max-sm:text-4xl font-black">JORDAN EVERDAY STAPLES</h1>
           <p className="pt-4 pb-4">
             Style and legacy come together in the latest collection
@@ -99,8 +93,8 @@ let [view,setView] = useState(3.2)
       <h1 className="text-3xl p-5 font-semibold ">Featured</h1>
       <div className="w-100%  h-[100vh] max-sm:gap-10 relative flex max-sm:flex-col  items-center justify-evenly">
         <div className="w-[48%]  
-        max-sm:w-[90%] h-3/4  relative ">
-          <img className="max-sm:h-[100%]" src={index.hImg1} alt="" />
+        max-sm:w-[95%] h-auto  relative ">
+          <img  className="max-sm:h-[50vh] w-100% "src={index.hImg1} alt="" />
           <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
@@ -116,9 +110,9 @@ let [view,setView] = useState(3.2)
           </div>
         </div>
         <div className="w-[48%] 
-        max-sm:w-[90%]
-        h-3/4  relative ">
-          <img src={index.hImg2} alt="" />
+        max-sm:w-[95%]
+        h-auto  relative ">
+          <img className="max-sm:h-[50vh] w-100% " src={index.hImg2} alt="" />
           <div
             className="flex flex-col  
           items-start justify-end absolute pl-10   bottom-1 "

@@ -8,12 +8,16 @@ import mbox1 from "./ManImg/men.jpg"
 import mbox2 from "./ManImg/men2.jpg"
 import man1 from "./ManImg/man (1).jpg"
 import man2 from "./ManImg/man (5).jpg"
+import man4 from "./ManImg/man1.jpg"
+import man5 from "./ManImg/man2.jpg"
+import man6 from "./ManImg/man3.jpg"
+
 import man3 from "./ManImg/man.jpg"
 import Swiper4 from "../swipers/Swiper4"
 import Swiper5 from "../swipers/Swiper5"
 
-
+import mHome from "./ManImg/mob-home.jpg"
 import dHome from "./ManImg/d-home.jpg"
 import Swiper2 from "../swipers/Swiper2"
 
-export default {manImg,Swiper1, mbox1,mbox2,dHome,Swiper2,Swiper4,Swiper5,man1,man2,man3 }
+export default {mHome,man6,man4,man5,manImg,Swiper1, mbox1,mbox2,dHome,Swiper2,Swiper4,Swiper5,man1,man2,man3 }
