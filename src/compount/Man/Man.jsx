@@ -54,14 +54,14 @@ let swp2Img3  =  index.man3
           <img className="w-[90%]" src={homeImg} alt="" />
         </div>
         <div className="w-100%  pb-10  text-center max-sm:pl-4">
-          <h1 className=" max-sm:w-3/4 text-6xl max-sm:text-4xl font-black">
+          <h1 className="max-sm:text-start max-sm:w-3/4 text-6xl max-sm:text-4xl font-black">
             YOUR TRAIL GUIDE AWAITS
           </h1>
           <p className="pt-4 pb-4">
             Explore the outside world world in our latest trail running & hiking
             styles
           </p>
-          <div className="flex max-sm:items-start w-100% items-center justify-center ">
+          <div className="flex max-sm:items-start w-100% items-center max-sm:justify-start justify-center">
             <button
               className="bg-black text-white 
             font-bold p-2 pr-4 pl-4 rounded-full mr-3 "
@@ -155,7 +155,7 @@ let swp2Img3  =  index.man3
         </div>
       </div>
       <div className="w-100% pl-2">
-        {/* <index.Swiper2 /> */}
+       
       </div>
       <h2
         className="
@@ -190,9 +190,9 @@ let swp2Img3  =  index.man3
    
       <div className="w-100% pl-2">
         <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
-        {/* <index.Swiper4 /> */}
+        <index.Swiper4 view={view}/>
         <h2 className="font-semibold text-[26px] p-10">Member Benefits</h2>
-        {/* <index.Swiper5 /> */}
+        <index.Swiper5 view={view} />
       </div>
     </>
   );

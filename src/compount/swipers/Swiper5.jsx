@@ -15,7 +15,7 @@ import img5 from "./swp/nike-just-do-it (28).jpg";
 import img6 from "./swp/nike-just-do-it (12).jpg";
 import img7 from "./swp/nike-just-do-it (13).jpg";
 
-export default function Swiper5({veiw}) {
+export default function Swiper5({view}) {
 
 
 
@@ -26,7 +26,7 @@ export default function Swiper5({veiw}) {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={veiw}
+      slidesPerView={view}
 
       //   pagination={{ clickable: true }}
       //   scrollbar={{ draggable: true }}

@@ -91,7 +91,7 @@ useEffect(()=>{
         <div className=" pl-10" >
           <img className="w-8 h-8 " src={nav1} alt="" />
         </div>
-        <div className="flex pr-10">
+        <div className="flex pr-10 cursor-pointer">
           <h4 className="text-sm font-semibold">Find a store | &nbsp;</h4>
 
           <h4  className="text-sm font-semibold"> Help |&nbsp; </h4>
@@ -199,7 +199,7 @@ useEffect(()=>{
        
         
             <InputBase
-            className="w-0"
+            className="w-19 max-sm:w-0"
              placeholder="Search .."
              >
               {/* <IconButton className="bg-red-900"></IconButton> */}

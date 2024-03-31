@@ -23,7 +23,7 @@ import { useState } from 'react';
 
 
 
-export default function Swiper4({veiw}) {
+export default function Swiper4({view}) {
 
   
 
@@ -33,7 +33,7 @@ export default function Swiper4({veiw}) {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={veiw}
+      slidesPerView={view}
       
    
     //   pagination={{ clickable: true }}

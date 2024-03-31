@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useState } from 'react';
 
-export default function Swiper1({img1,img2,img3,img4,veiw}) {
+export default function Swiper1({img1,img2,img3,img4,view}) {
 
 
 
@@ -23,7 +23,7 @@ export default function Swiper1({img1,img2,img3,img4,veiw}) {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={veiw}
+      slidesPerView={view}
     
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}

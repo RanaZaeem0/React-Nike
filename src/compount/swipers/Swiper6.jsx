@@ -25,7 +25,7 @@ export default function Swiper1({view,img1,img2,img3}) {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
-      slidesPerView={1.4}
+      slidesPerView={view}
       // navigation
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
