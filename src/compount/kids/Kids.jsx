@@ -29,7 +29,7 @@ export default function Kids() {
 
   return (
     <>
-      <div className="w-100% flex flex-col items-center max-sm:items-start  ">
+      <div className="w-100% flex flex-col items-center max-sm:items-start   ">
         <div className="w-100% flex items-center justify-center">
           <img
             className={`
@@ -53,10 +53,10 @@ export default function Kids() {
           </button>
         </div>
       </div>
-      <div className="w-100% items-center justify-center h-[1400px] ">
+      <div className="w-100% items-center justify-center h-[1400px]">
         <div className="h-screen w-[95%] pl-[5%]  grid grid-cols-2 items-center justify-center  ">
-          <div className="w-[98%] h-5/6 relative  ">
-            <img className="" src={index.img1} alt="" />
+          <div className="w-[98%]  relative  ">
+            <img className="h-5/6" src={index.img1} alt="" />
             <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
@@ -75,11 +75,11 @@ export default function Kids() {
           </div>
           </div>
 
-          <div className="w-11/12 h-5/6  relative">
-            <img className="h-[78vh]" src={index.img2} alt="" />
+          <div className="h-full  relative">
+            <img className="h-5/6 " src={index.img2} alt="" />
             <div
-            className="flex flex-col
-          items-start justify-end absolute pl-10   bottom-1 "
+            className="flex flex-col 
+          items-start justify-end absolute pl-10   bottom-28 "
           >
             <h3 className="text-2xl font-semibold">Babies and Toddleres</h3>
             <h2 className="text-1xl font-semibold">Explore apparel (OM-C) and Shoes (3-C) </h2>
@@ -95,8 +95,8 @@ export default function Kids() {
           </div>
           </div>
 
-          <div className="w-[98%] relative ">
-            <img className="" src={index.img3} alt="" />
+          <div className="w-[98%]  relative ">
+            <img className="h-5/6" src={index.img3} alt="" />
             <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
@@ -115,8 +115,8 @@ export default function Kids() {
           </div>
           </div>
 
-          <div className="w-11/12 relative ">
-            <img className="h-[84vh]" src={index.img4} alt="" />
+          <div className="w-100% h-[90vh] relative -top-16 ">
+            <img className="h-11/12 " src={index.img4} alt="" />
             <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
