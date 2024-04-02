@@ -9,7 +9,7 @@ import Woman from './compount/Woman.jsx'
 import Man from './compount/Man/Man.jsx'
 import New from "./compount/New.jsx"
 import Sales from './compount/Sales.jsx'
-import Kids from './compount/Kids.jsx'
+import Kids from './compount/kids/Kids.jsx'
 
 
 
