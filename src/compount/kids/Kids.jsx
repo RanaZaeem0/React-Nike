@@ -2,6 +2,9 @@ import React from "react";
 import index from "./index.js";
 import Swiper4 from "../swipers/Swiper4.jsx";
 import { useState,useEffect } from "react";
+import Swiper6 from "../swipers/Swiper6.jsx" 
+import Swiper2 from "../swipers/Swiper2.jsx";
+
 export default function Kids() {
   let [view, setView] = useState(3.2);
 
@@ -53,7 +56,7 @@ export default function Kids() {
           </button>
         </div>
       </div>
-      <div className="w-100% items-center justify-center h-[1400px]">
+      <div className="w-100% items-center justify-center h-[1200px]">
         <div className="h-screen w-[95%] pl-[5%]  grid grid-cols-2 items-center justify-center  ">
           <div className="w-[98%]  relative  ">
             <img className="h-5/6" src={index.img1} alt="" />
@@ -138,7 +141,42 @@ export default function Kids() {
       </div>
       {/* Forth swiper */}
 
+   <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
       <Swiper4 view={view} />
+      <h2
+          className="p-10
+        text-2xl font-semibold"
+        >
+          Shop the Essentails{" "}
+        </h2>
+
+        {
+                   storeWeith > 900 ?  
+                   <div className="w-100% flex items-center justify-evenly gap-10 ">
+                
+                   <div className="pl-10">
+                     <img src={index.img5} alt="" />
+                     <h2 className="font-semibold text-xl">Clothing</h2>
+                   </div>
+                   <div className="">
+                     <img src={index.img5} alt="" />
+                     <h2 className="font-semibold text-xl">Shoes</h2>
+           
+                   </div>
+                   <div className="pr-10">
+                     <img src={index.img6} alt="" />
+                     <h2 className="font-semibold text-xl">Accessories</h2>
+           
+                   </div>
+           
+                 </div>
+                   :         <Swiper6  view={view} img1={index.img5}  img2={index.img5}img3={index.img6}/>
+
+        }
+
+<h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
+        
+        <Swiper2  view={view}/>
     </>
   );
 }
