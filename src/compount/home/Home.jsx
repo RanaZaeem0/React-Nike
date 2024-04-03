@@ -28,6 +28,20 @@ export default function Home() {
   let img10 = index.swpImg10;
   let img11 = index.swpImg11;
   let img12 = index.swpImg12;
+  async function loadVideo(url) {
+            
+    try {
+      const response = await (url)
+      if(!response.ok){
+      console.log("erroe in load");
+      }
+      return response;
+    } catch (error) {
+      console.log(`Errror loading data ${error}`)
+      throw error;
+    }
+  }
+ 
 
   let [homemg, setHomeImg] = useState(index.homeImg);
   const [storeWeith, setstoreWeith] = useState(window.innerWidth);
@@ -60,7 +74,9 @@ export default function Home() {
         <div className="w-11/12    flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
           { storeWeith >900 ?  
-            <video autoPlay loop muted className="h-full w-100%" src={index.homeVideo}></video>
+        
+
+            <video autoPlay loop muted className="h-full w-100%" src={loadVideo(index.homeVideo)}></video>
             : <video autoPlay loop muted className="h-full w-100%"  src={index.hMobVi}></video>
           }
         </div>
