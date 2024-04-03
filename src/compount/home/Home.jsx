@@ -45,26 +45,26 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("resize", detectSize);
+    window.addEventListener('DOMContentLoaded',detectSize)
 
     return () => {
       window.removeEventListener("resize", detectSize);
     };
-  }, [storeWeith]);
+  }, []);
 
   // Observing changes to the root element (HTML element)
 
   return (
     <>
-      <div className="w-100% flex flex-col items-center max-sm:items-start  ">
-        <div className="w-100% flex items-center justify-center">
-          <img
-            className={`
-          `}
-            src={homemg}
-            alt=""
-          />
+      <div className="w-100% h-[800px] pt-4 flex flex-col items-center max-sm:items-center  ">
+        <div className="w-11/12 h-full   flex items-center justify-center">
+          {/* <img className={`h-full`} src={homemg} alt="" /> */}
+          { storeWeith >900 ?  
+            <video autoPlay loop muted className="h-full w-100%" src={index.homeVideo}></video>
+            : <video autoPlay loop muted className="h-full w-100%"  src={index.hMobVi}></video>
+          }
         </div>
-        <div className="w-10/12   h-56 text-center max-sm:pl-4">
+        <div className="w-10/12 max-sm:text-start   h-[39vh] text-center max-sm:pl-4">
           <h1 className=" text-6xl max-sm:text-5xl  max-sm:text-start font-black">
             JORDAN EVERDAY STAPLES
           </h1>
@@ -80,6 +80,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-100%">
+      <h2 className="font-semibold text-3xl pt-6 p-10">Trending</h2>
         <index.Swiper1
           img1={img1}
           img2={img2}

@@ -143,6 +143,61 @@ export default function Kids() {
 
    <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
       <Swiper4 view={view} />
+      <h1 className="text-3xl p-5 font-semibold ">Featured</h1>
+      <div className="w-100%   h-5/6  max-sm:gap-10 relative flex max-sm:flex-col  items-center justify-evenly">
+        <div
+          className="w-[48%]  
+        max-sm:w-[100%] h-auto  relative "
+        >
+          <img className=" max-sm:w-100% w-100% " src={index.feature1} alt="" />
+          <div
+            className="flex flex-col
+          items-start justify-end absolute pl-10   bottom-1 "
+          >
+            <h3 className="font-semibold text-white">Feel the Unreal </h3>
+            <h2 className="text-2xl font-semibold text-white">Air Max Dn</h2>
+            <div className="pt-6 pb-4">
+              <button
+                className="rounded-full    font-semibold  bg-white text-black
+              p-2 pr-4 pl-4  mr-2 "
+              >
+                Get Notified
+              </button>
+              <button
+                className="rounded-full font-semibold  bg-white text-black
+             p-2 pr-4 pl-4 "
+              >
+                Find Your Max
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="w-[48%] 
+        max-sm:w-[95%]
+        h-auto  relative "
+        >
+          <img className=" w-100% " src={index.feature1} alt="" />
+          <div
+            className="flex flex-col  
+          items-start justify-end absolute pl-10   bottom-1 "
+          >
+            <h3 className="font-semibold text-white">Just In</h3>
+            <h2 className="text-2xl font-semibold text-white">
+             
+             Fresh Dunk Colors
+            </h2>
+            <div className="pt-6 pb-4">
+              <button
+                className="rounded-full font-semibold  bg-white text-black
+          p-2 pr-4 pl-4 "
+              >
+                Shop
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <h2
           className="p-10
         text-2xl font-semibold"
@@ -156,27 +211,30 @@ export default function Kids() {
                 
                    <div className="pl-10">
                      <img src={index.img5} alt="" />
-                     <h2 className="font-semibold text-xl">Clothing</h2>
+                     <h2 className="font-semibold text-xl">Spring Break Ready</h2>
+
                    </div>
                    <div className="">
-                     <img src={index.img5} alt="" />
-                     <h2 className="font-semibold text-xl">Shoes</h2>
+                     <img className="" src={index.img7} alt="" />
+                     <h2 className="font-semibold text-xl">Shoes $70 & Under</h2>
            
                    </div>
                    <div className="pr-10">
                      <img src={index.img6} alt="" />
-                     <h2 className="font-semibold text-xl">Accessories</h2>
+                     <h2 className="font-semibold text-xl">Best of Jorden</h2>
            
                    </div>
            
                  </div>
-                   :         <Swiper6  view={view} img1={index.img5}  img2={index.img5}img3={index.img6}/>
+                   :         <Swiper6  view={view} img1={index.img5}  img2={index.img7}img3={index.img6}/>
 
         }
 
 <h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
         
         <Swiper2  view={view}/>
+
+   
     </>
   );
 }
