@@ -35,6 +35,7 @@ let swp2Img3  =  index.man3
  
     }
   useEffect(() => {
+    window.addEventListener('DOMContentLoaded',detectSize)
     window.addEventListener("resize", detectSize)
   
     return () => {
@@ -46,12 +47,13 @@ let swp2Img3  =  index.man3
 
   return (
     <>
-      <div className="w-100%">
-        <div
-          className="w-100%  flex items-center
-      justify-center"
-        >
-          <img className="w-[90%]" src={homeImg} alt="" />
+      <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
+      <div className="w-11/12    flex items-center justify-center">
+          {/* <img className={`h-full`} src={homemg} alt="" /> */}
+          { storeWeith >900 ?  
+            <video autoPlay loop muted className="h-full w-100%" src={index.dhome}></video>
+            : <video autoPlay loop muted className="h-full w-100%"  src={index.mvhome}></video>
+          }
         </div>
         <div className="w-100%  pb-10  text-center max-sm:pl-4">
           <h1 className="max-sm:text-start max-sm:w-3/4 text-6xl max-sm:text-4xl font-black">

@@ -10,6 +10,8 @@ import { useState } from 'react';
 
 export default function Swiper1({img1,img2,img3,img4,view}) {
 
+  // let [storeWeith,setstoreWeith] = useState(window.innerWidth)
+  let storeWeith  = window.innerWidth
 
 
 
