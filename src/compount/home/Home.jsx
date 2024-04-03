@@ -28,10 +28,11 @@ export default function Home() {
   let img10 = index.swpImg10;
   let img11 = index.swpImg11;
   let img12 = index.swpImg12;
-  async function loadVideo(url) {
+  async function loadVideo() {
             
     try {
-      const response = await (url)
+      const response = await (index.homeVideo)
+      console.log(response);
       if(!response.ok){
       console.log("erroe in load");
       }
@@ -76,7 +77,7 @@ export default function Home() {
           { storeWeith >900 ?  
         
 
-            <video autoPlay loop muted className="h-full w-100%" src={loadVideo(index.homeVideo)}></video>
+            <video autoPlay loop muted className="h-full w-100%" src={index.homeVideo}></video>
             : <video autoPlay loop muted className="h-full w-100%"  src={index.hMobVi}></video>
           }
         </div>
