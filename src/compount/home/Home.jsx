@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-100% h-[800px] pt-4 flex flex-col items-center max-sm:items-center  ">
+      <div className="w-100% h-[860px] pt-4 flex flex-col items-center max-sm:items-center  ">
         <div className="w-11/12 h-full   flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
           { storeWeith >900 ?  
