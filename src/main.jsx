@@ -10,6 +10,7 @@ import Man from './compount/Man/Man.jsx'
 import New from "./compount/New.jsx"
 import Sales from './compount/Sales.jsx'
 import Kids from './compount/kids/Kids.jsx'
+import Products from './compount/products/Products.jsx'
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path='Man' element={<Man/>}></Route>
       <Route path='sale' element={<Sales/>}></Route>
       <Route path='new' element={<New/>}></Route>
+      <Route path='products' element={<Products/>}></Route>
 
 
 

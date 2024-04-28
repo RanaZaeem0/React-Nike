@@ -5,7 +5,7 @@ export default function Footer() {
     <>
     <div
       className="text-white bg-black w-100%
-      flex justify-between pr-6 footer  pt-3" 
+      flex justify-between pr-6 footer  pt-3 overflow-hidden" 
       >
       <div className="pl-10 text-white flex max-sm:flex-col  pt-10 items-start justify-start ">
         <div className="leading-8 font-semibold cursor-pointer">

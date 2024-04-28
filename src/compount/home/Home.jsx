@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-
+import { NavLink } from "react-router-dom";
 export default function Home() {
   //  const [swiperview,setSwiperview] = useState('');
 
@@ -164,7 +164,7 @@ export default function Home() {
 
       <div className="w-100% ">
         <h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
-        <index.Swiper2 view={view} />
+       <NavLink to='products'> <index.Swiper2 view={view} /></NavLink>
         <h2 className="font-semibold text-[26px] p-10">Shop by Sport </h2>
         <index.Swiper3
           view={view}

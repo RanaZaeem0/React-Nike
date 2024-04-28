@@ -68,7 +68,9 @@ setNavPostion("")
 useEffect(()=>{
   
 })
+const handleMouseEnter =()=>{
 
+}
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -131,8 +133,10 @@ useEffect(()=>{
             
             "
               >
+
                 <NavLink
                   to=""
+                
                   className={({ isActive }) =>
                     `block py-2 pr-9 pl-6 duration-200 ${
                       isActive ? "text-orange-700" : "text-gray-700"
