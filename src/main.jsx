@@ -6,11 +6,11 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { AuthLayout, Login } from './compount/index.js'
-
-
-
-import Signup from './pages/Signup'
+// import {  Login,Signup } from './compount/index.js'
+import AuthLayout from "./compount/auth/AuthLayout.jsx"
+import Login from "./compount/auth/Login.jsx"
+import Signup from './compount/auth/Signup.jsx'
+import Kids from "./compount/kids/Kids.jsx"
 
 
 
