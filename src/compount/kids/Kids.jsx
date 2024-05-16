@@ -4,6 +4,7 @@ import Swiper4 from "../swipers/Swiper4.jsx";
 import { useState,useEffect } from "react";
 import Swiper6 from "../swipers/Swiper6.jsx" 
 import Swiper2 from "../swipers/Swiper2.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Kids() {
   let [view, setView] = useState(3.2);
@@ -11,6 +12,7 @@ export default function Kids() {
   let [homemg, setHomeImg] = useState(index.homeImg);
   const [storeWeith, setstoreWeith] = useState(window.innerWidth);
 
+  const navigate = useNavigate()
   const detectSize = () => {
     setstoreWeith(window.innerWidth);
     if (window.innerWidth < 960) {
@@ -24,11 +26,12 @@ export default function Kids() {
 
   useEffect(() => {
     window.addEventListener("resize", detectSize);
-
+    window.addEventListener('DOMContentLoaded',detectSize)
+    detectSize()
     return () => {
       window.removeEventListener("resize", detectSize);
     };
-  }, [storeWeith]);
+  },[navigate,storeWeith]);
 
   return (
     <>

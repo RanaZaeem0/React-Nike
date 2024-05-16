@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import index from "./index";
 import Swiper6 from "../swipers/Swiper6"
+import { useNavigate } from "react-router-dom";
 
 
 export default function Man() {
@@ -22,27 +23,26 @@ let swp2Img3  =  index.man3
     let [homeImg,setHomeImg] = useState(index.dHome)
   const [storeWeith,setstoreWeith] = useState(window.innerWidth)
 
-  const detectSize = ()=>{
-     setstoreWeith(window.innerWidth)
-               if(window.innerWidth < 960){
-                setHomeImg(index.mHome)
-                setView(1.3)
+const navigate = useNavigate()
+  const detectSize = () => {
+    setstoreWeith(window.innerWidth);
+    if (window.innerWidth < 960) {
+      setHomeImg(index.mHome);
+      setView(1.4);
+    } else {
+      setHomeImg(index.homeImg);
+      setView(3.2);
+    }
+  };
 
-               }else{
-                setHomeImg(index.dHome)
-                setView(3.2)
-               }
- 
-    }
   useEffect(() => {
+    window.addEventListener("resize", detectSize);
     window.addEventListener('DOMContentLoaded',detectSize)
-    window.addEventListener("resize", detectSize)
-  
+    detectSize()
     return () => {
-    window.removeEventListener("resize", detectSize)
-      
-    }
-  }, [storeWeith])
+      window.removeEventListener("resize", detectSize);
+    };
+  },[navigate,storeWeith]);
 
 
   return (
@@ -50,7 +50,7 @@ let swp2Img3  =  index.man3
       <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
       <div className="w-11/12    flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
-          { storeWeith >900 ?  
+          { storeWeith > 900 ?  
             <video autoPlay loop muted className="h-full w-100%" src={index.dhome}></video>
             : <video autoPlay loop muted className="h-full w-100%"  src={index.mvhome}></video>
           }

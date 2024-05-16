@@ -1,39 +1,71 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
+import App from './App.jsx'
 import './index.css'
+import { Provider } from 'react-redux'
+import store from './store/store.js'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
+import { AuthLayout, Login } from './compount/index.js'
+
+
+
+import Signup from './pages/Signup'
+
+
+
+
+// import { Woman } from '@mui/icons-material'
+import Woman from "./compount/Woman.jsx"
+import Man from "./compount/Man/Man.jsx"
 import Home from "./compount/home/Home.jsx"
-import Layout from "./Layout.jsx"
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Woman from './compount/Woman.jsx'
-import Man from './compount/Man/Man.jsx'
-import New from "./compount/New.jsx"
-import Sales from './compount/Sales.jsx'
-import Kids from './compount/kids/Kids.jsx'
-import Products from './compount/products/Products.jsx'
-
-
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
-      <Route path='' element={<Home/>}></Route>
-      <Route path='kids' element={<Kids/>}></Route>
-      <Route path='Woman' element={<Woman/>}></Route>
-      <Route path='Man' element={<Man/>}></Route>
-      <Route path='sale' element={<Sales/>}></Route>
-      <Route path='new' element={<New/>}></Route>
-      <Route path='products' element={<Products/>}></Route>
-
-
-
-    </Route>
-  )
-)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+        {
+            path: "/home",
+            element: <Home />,
+        },
+        {
+          path: "/woman",
+          element: <Woman />,
+      },  {
+        path: "/kids",
+        element: <Kids />,
+    },  {
+      path: "/man",
+      element: <Man />,
+  },
+        {
+            path: "/login",
+            element: (
+                <AuthLayout authentication={false}>
+                    <Login />
+                </AuthLayout>
+            ),
+        },
+        {
+            path: "/signup",
+            element: (
+                <AuthLayout authentication={false}>
+                    <Signup />
+                </AuthLayout>
+            ),
+        },
+     
+      
+      
+       
+    ],
+},
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode >
-  <RouterProvider router={router} />  
+  <React.StrictMode>
+    <Provider store={store}>
+    <RouterProvider router={router}/>
+    </Provider>
   </React.StrictMode>,
-  
 )

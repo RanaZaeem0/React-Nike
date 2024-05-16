@@ -28,6 +28,7 @@ import logo from "./logo.png";
 import shadows from "@mui/material/styles/shadows";
 import { InputBase, Paper } from "@mui/material";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -86,6 +87,20 @@ const handleMouseEnter =()=>{
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const authStatus = useSelector((state)=> state.auth.status)
+  const navItem = [
+   
+    {
+      name:"Login"
+      ,slug:"/login",
+      authstatus: !authStatus
+    },
+    {
+      name:"Signup"
+      ,slug:"/signup",
+      authstatus: !authStatus
+    }
+  ]
 
   return (
     <>
@@ -133,68 +148,63 @@ const handleMouseEnter =()=>{
             
             "
               >
+              <NavLink
+  to='/woman'
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+                  }
+                >
+                Woman
+                </NavLink>
+                <NavLink
+  to='/kids'
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+                  }
+                >
+                Kids
+                </NavLink>
+                <NavLink
+  to='/signup'
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+                  }
+                >
+                signup
+                </NavLink>
+                <NavLink
+  to='/login'
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+                  }
+                >
+                login
+                </NavLink>
+{/* {
+  navItem.map((item,index) =>(
+    item.authstatus ? <NavLink
+    key={index}
+     to={item.slug}
 
-                <NavLink
-                  to=""
-                
-                  className={({ isActive }) =>
-                    `block py-2 pr-9 pl-6 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
                   }
                 >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="new"
-                  className={({ isActive }) =>
-                    `block py-2 pr-9 pl-6 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
-                  }
-                >
-                  New & Featured
-                </NavLink>
-                <NavLink
-                  to="man"
-                  className={({ isActive }) =>
-                    `block py-2 pr-9 pl-9 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                  }
-                >
-                  Man
-                </NavLink>
-                <NavLink
-                  to="woman"
-                  className={({ isActive }) =>
-                    `block py-2 pr-9 pl-9 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                  }
-                >
-                  Woman
-                </NavLink>
-                <NavLink
-                  to="kids"
-                  className={({ isActive }) =>
-                    `block py-2 pr-9 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                  }
-                >
-                  Kids
-                </NavLink>
-                <NavLink
-                  to="sale"
-                  className={({ isActive }) =>
-                    `block py-2 pr-9 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                  }
-                >
-                  Sale
-                </NavLink>
+                  {item.name}
+                </NavLink>: null
+  ))
+} */}
+             
               </nav>
             </Box>
             <Paper className="!rounded-3xl  max-sm:!pl-0 !pl-5  !bg-gray-200 !shadow-none ">
@@ -254,50 +264,22 @@ const handleMouseEnter =()=>{
                   className="w-52 h-18 
                 flex items-start px-5 flex-col"
                 >
-                  <NavLink
-                    to="/"
-                    onClick={handleCloseNavMenu}
-                    className={({ isActive }) =>
-                      `block py-2 pr-9 pl-3 duration-200 ${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                    }
-                  >
-                    Home
-                  </NavLink>
-                  <NavLink
-                    to="woman"
-                    onClick={handleCloseNavMenu}
-                    className={({ isActive }) =>
-                      `block py-2 pr-9 pl-3 duration-200 ${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                    }
-                  >
-                    Woman
-                  </NavLink>
-                  <NavLink
-                    onClick={handleCloseNavMenu}
-                    to="man"
-                    className={({ isActive }) =>
-                      `block py-2 pr-9 pl-3 duration-200 ${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                    }
-                  >
-                    Man
-                  </NavLink>
-                  <NavLink
-                    onClick={handleCloseNavMenu}
-                    to="new"
-                    className={({ isActive }) =>
-                      `block py-2 pr-9 pl-3 duration-200 ${
-                        isActive ? "text-orange-700" : "text-gray-700"
-                      } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-4`
-                    }
-                  >
-                    New In
-                  </NavLink>
+            {
+  navItem.map((item,index) =>(
+    item.authstatus ? <NavLink
+    key={index}
+     to={item.slug}
+
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+                  }
+                >
+                  {item.name}
+                </NavLink>: null
+  ))
+}
                 </nav>
               </Menu>
             </Box>
