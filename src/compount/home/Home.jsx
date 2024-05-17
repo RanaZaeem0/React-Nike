@@ -77,8 +77,8 @@ export default function Home() {
           { storeWeith >900 ?  
         
 
-            <video autoPlay loop  className="h-full w-100%" src={index.homeVideo}></video>
-            : <video autoPlay loop  className="h-full w-100%"  src={index.hMobVi}></video>
+            <video autoPlay loop muted className="h-full w-100%" src={index.homeVideo}></video>
+            : <video autoPlay loop muted className="h-full w-100%"  src={index.hMobVi}></video>
           }
         </div>
         <div className="w-10/12 max-sm:text-start   h-[39vh] text-center max-sm:pl-4">

@@ -93,12 +93,17 @@ const handleMouseEnter =()=>{
     {
       name:"Login"
       ,slug:"/login",
-      authstatus: !authStatus
+      authstatus: authStatus
     },
     {
       name:"Signup"
       ,slug:"/signup",
-      authstatus: !authStatus
+      authstatus: authStatus
+    },
+    {
+      name:"logout"
+      ,slug:"/user",
+      authstatus:!authStatus
     }
   ]
 
@@ -159,6 +164,16 @@ const handleMouseEnter =()=>{
                 Woman
                 </NavLink>
                 <NavLink
+       to='/home'
+     className={({ isActive }) =>
+        `block py-2 pr-9 pl-6 duration-200 ${
+       isActive ? "text-orange-700" : "text-gray-700"
+           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
+                  }
+                >
+                Home
+                </NavLink>
+                <NavLink
   to='/kids'
      className={({ isActive }) =>
         `block py-2 pr-9 pl-6 duration-200 ${
@@ -168,7 +183,7 @@ const handleMouseEnter =()=>{
                 >
                 Kids
                 </NavLink>
-                <NavLink
+                {/* <NavLink
   to='/signup'
      className={({ isActive }) =>
         `block py-2 pr-9 pl-6 duration-200 ${
@@ -187,8 +202,8 @@ const handleMouseEnter =()=>{
                   }
                 >
                 login
-                </NavLink>
-{/* {
+                </NavLink> */}
+{
   navItem.map((item,index) =>(
     item.authstatus ? <NavLink
     key={index}
@@ -203,7 +218,7 @@ const handleMouseEnter =()=>{
                   {item.name}
                 </NavLink>: null
   ))
-} */}
+}
              
               </nav>
             </Box>
