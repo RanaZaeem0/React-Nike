@@ -17,9 +17,9 @@ import Swiper4 from "../swipers/Swiper4"
 import Swiper5 from "../swipers/Swiper5"
 
 import mHome from "./ManImg/mob-home.jpg"
-import dHome from "./ManImg/d-home.jpg"
+import dHome from "./ManImg/menHome1.mp4"
 import Swiper2 from "../swipers/Swiper2"
-import dhome from "../home/hImg/homevi.mp4"
+// import dhome from "../home/hImg/dc.mp4"
 import mvhome from "./ManImg/menHome.mp4"
 
-export default {mvhome,mHome,dhome,man6,man4,man5,manImg,Swiper1, mbox1,mbox2,dHome,Swiper2,Swiper4,Swiper5,man1,man2,man3 }
+export default {mvhome,mHome,man6,man4,man5,manImg,Swiper1, mbox1,mbox2,dHome,Swiper2,Swiper4,Swiper5,man1,man2,man3 }
