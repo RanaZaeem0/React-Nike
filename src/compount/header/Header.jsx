@@ -110,14 +110,10 @@ const handleMouseEnter =()=>{
       ,slug:"/woman",
       authstatus: true
     },
-    {
-      name:"Login"
-      ,slug:"/login",
-      authstatus: !authStatus
-    },
+  
     {
       name:"logout"
-      ,slug:"/user",
+      ,slug:"/logout",
       authstatus:authStatus
     }
   ]
@@ -133,7 +129,11 @@ const handleMouseEnter =()=>{
 
           <h4  className="text-sm font-semibold"> Help |&nbsp; </h4>
           <h4  className="text-sm font-semibold"> Join us | &nbsp;</h4>
-          <h4  className="text-sm font-semibold"> Sign in</h4>
+         { authStatus ?
+           <NavLink  to='logout' className="text-sm font-semibold"> sign in | &nbsp;</NavLink >
+          :   <NavLink  to='logout' className="text-sm font-semibold"> sign in | &nbsp;</NavLink >
+
+         }
         </div>
       </div>
       <AppBar
