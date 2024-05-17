@@ -91,13 +91,28 @@ const handleMouseEnter =()=>{
   const navItem = [
    
     {
-      name:"Login"
-      ,slug:"/login",
-      authstatus: !authStatus
+      name:"Home"
+      ,slug:"/",
+      authstatus: true
     },
     {
-      name:"Signup"
-      ,slug:"/signup",
+      name:"Kids"
+      ,slug:"/kids",
+      authstatus: true
+    },
+    {
+      name:"Man"
+      ,slug:"/man",
+      authstatus: true
+    },
+    {
+      name:"Woman"
+      ,slug:"/woman",
+      authstatus: true
+    },
+    {
+      name:"Login"
+      ,slug:"/login",
       authstatus: !authStatus
     },
     {
@@ -153,36 +168,7 @@ const handleMouseEnter =()=>{
             
             "
               >
-              <NavLink
-  to='/woman'
-     className={({ isActive }) =>
-        `block py-2 pr-9 pl-6 duration-200 ${
-       isActive ? "text-orange-700" : "text-gray-700"
-           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
-                  }
-                >
-                Woman
-                </NavLink>
-                <NavLink
-       to='/home'
-     className={({ isActive }) =>
-        `block py-2 pr-9 pl-6 duration-200 ${
-       isActive ? "text-orange-700" : "text-gray-700"
-           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
-                  }
-                >
-                Home
-                </NavLink>
-                <NavLink
-  to='/kids'
-     className={({ isActive }) =>
-        `block py-2 pr-9 pl-6 duration-200 ${
-       isActive ? "text-orange-700" : "text-gray-700"
-           } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 font-semibold lg:pl-6 `
-                  }
-                >
-                Kids
-                </NavLink>
+          
                 {/* <NavLink
   to='/signup'
      className={({ isActive }) =>

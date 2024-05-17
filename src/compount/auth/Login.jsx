@@ -112,6 +112,7 @@ const userPhotoUrl = user.displayName
              })}
             />
                           <div class="px-6 sm:px-0 max-w-sm">
+
     <button onClick={()=>{
       handleGoogleAuth()
     }}
