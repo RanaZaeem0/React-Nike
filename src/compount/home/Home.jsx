@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-100%">
-      <h2 className="font-semibold text-3xl pt-6 p-10">Trending</h2>
+      <h2 className="font-semibold text-3xl pt-10 p-10">Trending</h2>
         <index.Swiper1
           img1={img1}
           img2={img2}

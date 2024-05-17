@@ -50,7 +50,7 @@ const navigate = useNavigate()
       <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
       <div className="w-11/12    flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
-          { storeWeith > 900 ?  
+          { storeWeith<900 ?  
             <video autoPlay loop muted className="h-full w-100%" src={index.dhome}></video>
             : <video autoPlay loop muted className="h-full w-100%"  src={index.mvhome}></video>
           }

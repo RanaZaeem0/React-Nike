@@ -13,7 +13,7 @@ import Signup from "./compount/auth/Signup.jsx";
 import Kids from "./compount/kids/Kids.jsx";
 import Sales from "./compount/Sales.jsx";
 import Logout from "./compount/auth/Logout.jsx";
-
+import Products from "./compount/products/Products.jsx";
 // import { Woman } from '@mui/icons-material'
 import Woman from "./compount/Woman.jsx";
 import Man from "./compount/Man/Man.jsx";
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/woman",
         element: <Woman />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
       },
       {
         path: "/kids",
