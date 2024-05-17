@@ -93,17 +93,17 @@ const handleMouseEnter =()=>{
     {
       name:"Login"
       ,slug:"/login",
-      authstatus: authStatus
+      authstatus: !authStatus
     },
     {
       name:"Signup"
       ,slug:"/signup",
-      authstatus: authStatus
+      authstatus: !authStatus
     },
     {
       name:"logout"
       ,slug:"/user",
-      authstatus:!authStatus
+      authstatus:authStatus
     }
   ]
 
