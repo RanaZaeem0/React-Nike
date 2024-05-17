@@ -1,12 +1,17 @@
 import {getAuth,signOut} from "firebase/auth"
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import {logout} from "../../store/authSlice"
 
-
-function User(){
-
+function Logout(){
+const dispatch = useDispatch()
+const navigate = useNavigate()
+const selector  = useSelector(state => state.auth.status)
     const logout = ()=>{
         const auth = getAuth();
         signOut(auth).then(() => {
-          // Sign-out successful.
+  console.log(selector)
+
         }).catch((error) => {
           // An error happened.
         });
@@ -24,4 +29,4 @@ function User(){
 </>
     )
 }
-export default User
+export default Logout

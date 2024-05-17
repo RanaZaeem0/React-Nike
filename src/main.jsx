@@ -12,7 +12,7 @@ import Login from "./compount/auth/Login.jsx"
 import Signup from './compount/auth/Signup.jsx'
 import Kids from "./compount/kids/Kids.jsx"
 import Sales from "./compount/Sales.jsx"
-import User from "./compount/home/User.jsx"
+import Logout from "./compount/auth/Logout.jsx"
 
 
 
@@ -58,8 +58,8 @@ const router = createBrowserRouter([
         {
             path: "/user",
             element: (
-                <AuthLayout authentication={false}>
-                    <User />
+                <AuthLayout authentication>
+                    <Logout />
                 </AuthLayout>
             ),
         },

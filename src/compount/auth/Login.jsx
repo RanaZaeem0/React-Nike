@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { login as authLogin } from "../../store/authSlice";
+import { login as authLogin, logout } from "../../store/authSlice";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 // import { Button, Input, Logo } from "../index";
 import Button from "./Button";
@@ -47,7 +47,8 @@ const userPhotoUrl = user.displayName
     const uid = user.uid;
     // ...
   } else {
-    selector = false;
+    dispatch(logout())
+    console.log(`user is not login`);
     // User is signed out
     // ...
   }
@@ -111,7 +112,6 @@ const userPhotoUrl = user.displayName
              })}
             />
                           <div class="px-6 sm:px-0 max-w-sm">
-                            <h1>{localStorage.getItem("name")}</h1>
     <button onClick={()=>{
       handleGoogleAuth()
     }}
