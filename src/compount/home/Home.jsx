@@ -10,8 +10,10 @@ export default function Home() {
   //  const dispatch  =useDispatch()
 
   //  const viewChanger= ()=>{
+  // zain
 
   // dispatch(updatedview(swiperview))
+  
 
   //  }
   let [view, setView] = useState(3.2);
