@@ -59,8 +59,9 @@ export default function Kids() {
           </button>
         </div>
       </div>
-      <div className="w-100% items-center justify-center h-[1200px]">
-        <div className="h-screen w-[95%] pl-[5%]  grid grid-cols-2 items-center justify-center  ">
+      <div className="w-100% items-center justify-center max-sm:h-[1310px]
+       h-[1200px]">
+        <div className="h-screen w-[95%] pl-[5%]  grid grid-cols-2 max-sm:grid-cols-1 items-center justify-center  max-sm:gap-[30px]  ">
           <div className="w-[98%]  relative  ">
             <img className="h-5/6" src={index.img1} alt="" />
             <div
@@ -82,10 +83,10 @@ export default function Kids() {
           </div>
 
           <div className="h-full  relative">
-            <img className="h-5/6 " src={index.img2} alt="" />
+            <img className="h-5/6 max-sm:h-full " src={index.img2} alt="" />
             <div
             className="flex flex-col 
-          items-start justify-end absolute pl-10   bottom-28 "
+          items-start justify-end absolute pl-10   bottom-28 max-sm:bottom-1 "
           >
             <h3 className="text-2xl font-semibold">Babies and Toddleres</h3>
             <h2 className="text-1xl font-semibold">Explore apparel (OM-C) and Shoes (3-C) </h2>
@@ -101,11 +102,11 @@ export default function Kids() {
           </div>
           </div>
 
-          <div className="w-[98%]  relative ">
-            <img className="h-5/6" src={index.img3} alt="" />
+          <div className="w-[98%]  relative  ">
+            <img className="h-5/6 max-sm:w-full" src={index.img3} alt="" />
             <div
             className="flex flex-col
-          items-start justify-end absolute pl-10   bottom-1 "
+          items-start justify-end absolute pl-10   bottom-1 max-sm:bottom-16 "
           >
             <h3 className="text-2xl font-semibold">Little Kids </h3>
             <h2 className="text-1xl font-semibold">Explore apparel (4-7Y) and Shoes (10y) </h2>
@@ -121,11 +122,11 @@ export default function Kids() {
           </div>
           </div>
 
-          <div className="w-100% h-[90vh] relative -top-16 ">
+          <div className="w-100% h-[90vh] max-sm:h-[65vh] max-lg:h-[65vh] relative -top-16 max-sm:top-0 ">
             <img className="h-11/12 " src={index.img4} alt="" />
             <div
             className="flex flex-col
-          items-start justify-end absolute pl-10   bottom-1 "
+          items-start justify-end absolute pl-10   bottom-1 max-sm:bottom-4"
           >
             <h3 className="text-2xl font-semibold">Extended Sizes </h3>
             <h2 className="text-1xl font-semibold">Explore apparel Shoes (XL+ ) </h2>
@@ -152,7 +153,7 @@ export default function Kids() {
           className="w-[48%]  
         max-sm:w-[100%] h-auto  relative "
         >
-          <img className=" max-sm:w-100% w-100% " src={index.feature1} alt="" />
+          <img className=" max-sm:w-100% w-100% " src={index.feature2} alt="" />
           <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
@@ -235,7 +236,7 @@ export default function Kids() {
 
 <h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
         
-        <Swiper2  view={view}/>
+        <Swiper2 view={view}/>
 
    
     </>

@@ -7,6 +7,8 @@ import img5 from "./kidimg/5.jpg"
 import img6 from "./kidimg/6.jpg"
 import img7 from "./kidimg/7.jpg"
 import feature1 from "./kidimg/feature1.jpg"
+import feature2 from "./kidimg/feature2.jpg"
 
 
-export default{dhome,img7 ,img1,img2,img3,img4,feature1,img5,img6}
+
+export default{dhome,img7 ,img1,img2,img3,img4,feature1,feature2,img5,img6}

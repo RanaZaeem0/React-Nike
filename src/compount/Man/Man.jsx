@@ -48,11 +48,11 @@ const navigate = useNavigate()
   return (
     <>
       <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
-      <div className="w-11/12    flex items-center justify-center">
+      <div className="w-full    flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
           { storeWeith<900 ?  
-            <video autoPlay loop muted className="h-full w-100%" src={index.dHome}></video>
-            : <video autoPlay loop muted className="h-full w-100%"  src={index.mvhome}></video>
+            <video autoPlay loop muted className="h-full w-full" src={index.dHome}></video>
+            : <video autoPlay loop muted className="h-full w-full"  src={index.mvhome}></video>
           }
         </div>
         <div className="w-100%  pb-10  text-center max-sm:pl-4">

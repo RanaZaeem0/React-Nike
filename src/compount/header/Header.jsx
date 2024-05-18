@@ -120,7 +120,7 @@ const handleMouseEnter =()=>{
 
   return (
     <>
-      <div className=" w-100% flex max-sm:hidden  justify-between items-center bg-white h-10 ">
+      <div className=" w-100% flex max-sm:hidden  justify-between items-center bg-slate-100 h-10 ">
         <div className=" pl-10" >
           <img className="w-8 h-8 " src={nav1} alt="" />
         </div>
@@ -130,7 +130,7 @@ const handleMouseEnter =()=>{
           <h4  className="text-sm font-semibold"> Help |&nbsp; </h4>
           <h4  className="text-sm font-semibold"> Join us | &nbsp;</h4>
          { authStatus ?
-           <NavLink  to='logout' className="text-sm font-semibold"> sign in | &nbsp;</NavLink >
+           <NavLink  to='logout' className="text-sm font-semibold"> logout | &nbsp;</NavLink >
           :   <NavLink  to='logout' className="text-sm font-semibold"> sign in | &nbsp;</NavLink >
 
          }
@@ -139,7 +139,7 @@ const handleMouseEnter =()=>{
       <AppBar
         position={navPostion}
         className="
-    shadow-indigo-500/40 "
+     shadow-none "
       >
         <Container maxWidth="xl" className="bg-white">
           <Toolbar disableGutters>

@@ -71,8 +71,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
-        <div className="w-11/12    flex items-center justify-center">
+      <div className="w-100% bg-slate-100    pt-4 flex flex-col items-center max-sm:items-center  ">
+        <div className="w-full flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
           { storeWeith >900 ?  
         
@@ -112,7 +112,7 @@ export default function Home() {
           className="w-[48%]  
         max-sm:w-[100%] h-auto  relative "
         >
-          <img className=" max-sm:w-100% w-100%  max-sm:h-80" src={index.hImg1} alt="" />
+          <img className=" max-sm:w-100% w-100%  max-sm:h-[31rem]" src={index.hImg1} alt="" />
           <div
             className="flex flex-col
           items-start justify-end absolute pl-10   bottom-1 "
@@ -140,7 +140,7 @@ export default function Home() {
         max-sm:w-[95%]
         h-auto  relative "
         >
-          <img className=" w-100%  max-sm:h-80" src={index.hImg2} alt="" />
+          <img className=" w-100%  max-sm:h-[31rem]" src={index.hImg2} alt="" />
           <div
             className="flex flex-col  
           items-start justify-end absolute pl-10   bottom-1 "
@@ -177,11 +177,11 @@ export default function Home() {
           img7={img12}
         />
         <h2 className="font-black text-[26px] p-10 max-sm:p-3">Popular Right Now </h2>
-        <index.Swiper4 view={view} />
+        <NavLink to='products'>  <index.Swiper4 view={view} /></NavLink>
       </div>
       <div className="pt-12 pb-10 pl-1">
         <h2 className="font-black text-[26px] p-10 max-sm:p-3">Member Benefits</h2>
-        <index.Swiper5 view={view} />
+        <NavLink to='products' ><index.Swiper5 view={view} /></NavLink>
       </div>
     </>
   );
