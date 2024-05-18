@@ -12,6 +12,7 @@ export default function Home() {
   //  const viewChanger= ()=>{
 
   // dispatch(updatedview(swiperview))
+  
 
   //  }
   let [view, setView] = useState(3.2);
