@@ -36,7 +36,7 @@ console.log(selector);
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
-  navigate('/kids')
+  navigate('/')
   const name =  user.displayName
 const email =  user.email
 const userPhotoUrl = user.displayName

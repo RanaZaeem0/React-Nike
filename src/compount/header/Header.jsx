@@ -87,6 +87,8 @@ const handleMouseEnter =()=>{
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const authSelector = useSelector((data)=> data.auth.userData)
+
   const authStatus = useSelector((state)=> state.auth.status)
   const navItem = [
    
@@ -130,7 +132,9 @@ const handleMouseEnter =()=>{
           <h4  className="text-sm font-semibold"> Help |&nbsp; </h4>
           <h4  className="text-sm font-semibold"> Join us | &nbsp;</h4>
          { authStatus ?
-           <NavLink  to='logout' className="text-sm font-semibold"> logout | &nbsp;</NavLink >
+           <NavLink  to='logout' className="text-sm font-semibold"> 
+            <h4  className="text-sm font-semibold">logout &nbsp;</h4>
+           &nbsp;</NavLink >
           :   <NavLink  to='logout' className="text-sm font-semibold"> sign in | &nbsp;</NavLink >
 
          }
