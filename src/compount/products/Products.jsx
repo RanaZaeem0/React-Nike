@@ -193,12 +193,12 @@ function Products() {
         Filter<i className="pl-3 fa-solid fa-list-check"></i>
       </h1>
         </div>
-      <Box my={4} className="flex">
+      <Box my={4} className="flex ">
         <div
           className={` ${
             filterStyle
-              ? " max-lg:w-[32%] max-md:w-[97%]  z-10 max-md:absolute max-lg:h-screen border-1px  bg-white  pr-5"
-              : "max-md:hidden  max-md:w-[27%]  pr-4  w-[20%] "
+              ? "  max-lg:w-[32%] max-md:w-[97%]  z-10 max-md:absolute max-lg:h-screen border-1px  bg-white  pr-5"
+              : " overflow-auto  h-full absolute  max-md:hidden  max-md:w-[27%]  pr-10  w-[20%] "
           } `}
         >
           <Box my={2}>
@@ -274,10 +274,11 @@ function Products() {
           </Box>
         </div>
 
-        <div className="product max-lg:w-full  w-[80%] max-md:w-full border-1px">
+        <div className="product 
+        ml-[20%] max-md:ml-0 max-lg:w-full  w-[80%] max-md:w-full border-1px grid grid-cols-1  gap-10 h-screen overflow-y-scroll scroll-smooth">
           <Box my={4}>
             <Typography variant="h6">Best Collection</Typography>
-            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-5 justify-around">
+            <div  className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-2  gap-5 justify-around">
               {filteredData.map((item, index) => {
                 return (
                   <div
