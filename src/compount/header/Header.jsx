@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
@@ -58,6 +58,7 @@ let [weith,setWeith] = React.useState(window.innerHeight)
 function handleWieth(){
   setWeith(window.innerWidth)
 }
+const navigate =  useNavigate()
 useEffect(()=>{
 if(weith < 900){
 setNavPostion("")
@@ -65,13 +66,9 @@ setNavPostion("")
   setNavPostion("fixed")
 }
 
-},[weith])
-useEffect(()=>{
-  
-})
-const handleMouseEnter =()=>{
+},[weith,navigate])
 
-}
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
