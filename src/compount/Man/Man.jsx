@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import index from "./index";
 import Swiper6 from "../swipers/Swiper6"
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 export default function Man() {
@@ -105,7 +105,7 @@ const navigate = useNavigate()
          </div>
  
        </div>
-         :         <Swiper6  view={view} img1={swp1Img1}  img2={swp1Img2}img3={swp1Img3}/>
+         :         <NavLink to='products'><Swiper6  view={view} img1={swp1Img1}  img2={swp1Img2}img3={swp1Img3}/></NavLink>
         }
   
 
@@ -184,17 +184,17 @@ const navigate = useNavigate()
         </div>
       </div>
       : 
-      <Swiper6 view=
-      {view}  img1={swp2Img1}
-      img2={swp2Img2}
-      img3={swp2Img3}/>
+  <NavLink to='products'>    <Swiper6 view=
+  {view}  img1={swp2Img1}
+  img2={swp2Img2}
+  img3={swp2Img3}/></NavLink>
 }
    
       <div className="w-100% pl-2">
         <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
-        <index.Swiper4 view={view}/>
+       <NavLink  to="products"> <index.Swiper4 view={view}/></NavLink>
         <h2 className="font-semibold text-[26px] p-10">Member Benefits</h2>
-        <index.Swiper5 view={view} />
+     <NavLink to="products">   <index.Swiper5 view={view} /></NavLink>
       </div>
     </>
   );

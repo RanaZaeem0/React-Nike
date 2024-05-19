@@ -4,7 +4,7 @@ import Swiper4 from "../swipers/Swiper4.jsx";
 import { useState,useEffect } from "react";
 import Swiper6 from "../swipers/Swiper6.jsx" 
 import Swiper2 from "../swipers/Swiper2.jsx";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Kids() {
   let [view, setView] = useState(3.2);
@@ -235,8 +235,8 @@ export default function Kids() {
         }
 
 <h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
-        
-        <Swiper2 view={view}/>
+        <NavLink to='products'>
+        <Swiper2 view={view}/></NavLink>
 
    
     </>
