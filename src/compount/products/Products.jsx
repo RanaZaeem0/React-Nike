@@ -178,7 +178,7 @@ function Products() {
   return (
     <Container className="">
     
-      <div className="flex items-center justify-between w-full mt-8 text-2xl
+      <div className="flex items-center justify-between w-full max-md:mt-8 text-2xl
       ">
        <h1 className="flex items-center "> / 
         <h1 className="font-semibold text-1xl">{
@@ -198,7 +198,7 @@ function Products() {
           className={` ${
             filterStyle
               ? "  max-lg:w-[32%] max-md:w-[97%]  z-10 max-md:absolute max-lg:h-screen border-1px  bg-white  pr-5"
-              : " overflow-auto  h-full absolute  max-md:hidden  max-md:w-[27%]  pr-10  w-[20%] "
+              : " overflow-auto  h-full absolute  max-md:hidden  max-md:w-[27%]  pr-16  w-[20%] "
           } `}
         >
           <Box my={2}>
