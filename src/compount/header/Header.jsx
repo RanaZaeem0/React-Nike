@@ -20,7 +20,7 @@ import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-
+import { useState } from "react";
 import nav1 from "./nav.png";
 
 
@@ -37,7 +37,9 @@ function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   
-  
+  const [profile ,setProfile] = React.useState(true)
+
+
   let [inputWeith,setInputWeith] = React.useState(0)
 
 
@@ -85,6 +87,9 @@ setNavPostion("")
     setAnchorElUser(null);
   };
   const authSelector = useSelector((data)=> data.auth.userData)
+
+  const [openprofile ,setOpenProfile] = useState(false)
+ 
 
   const authStatus = useSelector((state)=> state.auth.status)
   const navItem = [
@@ -227,7 +232,7 @@ setNavPostion("")
                {/* <SearchIcon/> */}
             </InputBase>}
            </Paper>
-           <NavLink className=" ">
+           <NavLink className="flex ">
 
            <a className="text-black pl-4 pr-2 text-lg ">
           <i className="fa-regular fa-heart"></i>
@@ -235,6 +240,32 @@ setNavPostion("")
           <a href="" className="text-black pl-4 pr-2 text-lg ">
           <i className="fa-solid fa-bag-shopping"></i>
           </a>
+          { authStatus ? 
+           <div 
+           onClick={()=>setOpenProfile(true)}
+           className="text-black pl-4 pr-2 text-lg ">
+           <i className="fa-solid fa-bag-shopping"></i>
+           </div>
+           : 
+           null
+            
+          }
+          {
+            openprofile ? 
+            <>
+            <h1 className="text-black">{localStorage.getItem('name')}</h1>
+            <h1  className="text-black">{localStorage.getItem('email')}</h1>
+
+    
+  <a href={`${localStorage.getItem('img')}`}>
+  <img src={`${localStorage.getItem('emialPhoto')}`} alt="" />
+  </a>
+           
+
+            
+            </>
+            :null
+          }
            </NavLink>
       
 

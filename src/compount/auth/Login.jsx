@@ -38,8 +38,12 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
   navigate('/')
   const name =  user.displayName
+  localStorage.setItem('name', name)
 const email =  user.email
+localStorage.setItem('email', email)
+
 const userPhotoUrl = user.displayName
+localStorage.setItem('img' ,userPhotoUrl)
   const userDetails = [{username: name , useremail :email , userPhoto: userPhotoUrl
   }]
   dispatch(authLogin(userDetails))
