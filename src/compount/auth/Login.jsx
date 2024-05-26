@@ -19,9 +19,7 @@ export default function Login() {
  
     const handleGoogleAuth = async ()=>{
 signInWithGoogle()
-const name =  localStorage.getItem("name")
-const email =  localStorage.getItem("email")
-const userPhotoUrl = localStorage.getItem("emialPhoto")
+
 const userDetails = [{username: name , useremail :email , userPhoto: userPhotoUrl
 }]
 if(userDetails) {

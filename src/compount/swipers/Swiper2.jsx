@@ -17,7 +17,7 @@ import swpImg11 from "./swp/swp11.jpg"
 
 import { useState } from 'react';
 
-
+let swp2data= [swpImg11,swpImg5,swpImg6,swpImg7,swpImg8,swpImg9]
 
 
 
@@ -28,18 +28,31 @@ export default function Swiper2({view}) {
 
   return (
     <Swiper
-    className='cursor-pointer pt-10 pb-10'
+    
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
       slidesPerView={view}
-     
+      className='pb-10 !pl-2 max-sm:ml-4'
       // pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className='max-sm:ml-4 '>
+      {
+        swp2data.map((item,index) =>{
+          return  <SwiperSlide
+          
+          key={index}>
+          <img
+          className='!h-[56vh]'
+          
+          src={item} alt="" />
+        
+        </SwiperSlide>
+        })
+      }
+      {/* <SwiperSlide className='max-sm:ml-4 '>
         <img src={swpImg8} alt="" />
       
       </SwiperSlide>
@@ -62,7 +75,7 @@ export default function Swiper2({view}) {
       <SwiperSlide>
         <img src={swpImg11} alt="" />
       
-      </SwiperSlide>
+      </SwiperSlide> */}
       
     </Swiper>
   )

@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-
+import shopingicon from "./shopping.svg" 
 
 import { styled, alpha } from '@mui/material/styles';
 
@@ -29,6 +29,7 @@ import shadows from "@mui/material/styles/shadows";
 import { InputBase, Paper } from "@mui/material";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Avatars from "./Avatars";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -38,6 +39,8 @@ function Header() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   
   const [profile ,setProfile] = React.useState(true)
+
+
 
 
   let [inputWeith,setInputWeith] = React.useState(0)
@@ -130,7 +133,7 @@ setNavPostion("")
   return (
     <>
       <div className=" w-100% flex max-sm:hidden  justify-between items-center bg-slate-100 h-10 ">
-        <div className=" pl-10" >
+        <div className=" pl-10 max-sm:pl-0" >
           <img className="w-8 h-8 " src={nav1} alt="" />
         </div>
         <div className="flex pr-10 cursor-pointer">
@@ -219,8 +222,9 @@ setNavPostion("")
              
               </nav>
             </Box>
-            <Paper className="!rounded-3xl  max-sm:!pl-0 !pl-5  !bg-gray-200 !shadow-none ">
-              <a href=""><i className="fa-solid fa-magnifying-glass"></i> </a>
+            <Paper className="!rounded-3xl
+            text-[1.2rem]  max-sm:!pl-0 !pl-5  !bg-gray-200 max-md:!bg-white !shadow-none flex items-center justify-center ">
+              <div href=""><i className="fa-solid fa-magnifying-glass"></i> </div>
           { 
        
         
@@ -232,40 +236,27 @@ setNavPostion("")
                {/* <SearchIcon/> */}
             </InputBase>}
            </Paper>
-           <NavLink className="flex ">
+           <NavLink className="flex items-center justify-center">
 
-           <a className="text-black pl-4 pr-2 text-lg ">
+           <div className="text-black max-md:hidden pl-4 pr-2 max-md:pl-1 text-xl ">
           <i className="fa-regular fa-heart"></i>
-          </a>
-          <a href="" className="text-black pl-4 pr-2 text-lg ">
-          <i className="fa-solid fa-bag-shopping"></i>
+          </div>
+          <a href="" className="text-black pl-4 max-md:pr-0 max-md:pl-5  text-xl ">
+          <img
+          className="
+          h-5
+          "
+          src={shopingicon} alt="" />
           </a>
           { authStatus ? 
-           <div 
-           onClick={()=>setOpenProfile(true)}
-           className="text-black pl-4 pr-2 text-lg ">
-           <i className="fa-solid fa-bag-shopping"></i>
-           </div>
+
+        
+          <Avatars/>
            : 
            null
             
           }
-          {
-            openprofile ? 
-            <>
-            <h1 className="text-black">{localStorage.getItem('name')}</h1>
-            <h1  className="text-black">{localStorage.getItem('email')}</h1>
-
-    
-  <a href={`${localStorage.getItem('img')}`}>
-  <img src={`${localStorage.getItem('emialPhoto')}`} alt="" />
-  </a>
-           
-
-            
-            </>
-            :null
-          }
+       
            </NavLink>
       
 

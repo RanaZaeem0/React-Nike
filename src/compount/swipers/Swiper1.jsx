@@ -15,6 +15,20 @@ export default function Swiper1({img1,img2,img3,img4,view}) {
 
 
 
+  let sp1data = [ 
+    {
+      img: img1
+    },
+    {
+      img: img2
+    },
+    {
+      img: img3
+    },
+    {
+      img: img4
+    },
+  ]
 
 
 
@@ -26,27 +40,41 @@ export default function Swiper1({img1,img2,img3,img4,view}) {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={10}
       slidesPerView={view}
-    
+      className='pb-10 !pl-2 max-sm:ml-4'
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className='pb-10 ml-12 max-sm:ml-4 ' >
-        <img src={img1} alt="" />
+      {
+        sp1data.map((item,index) =>{
+          index 
+          return <SwiperSlide
+          key={index}
+          className=''
+          >
+          <img
+          className='h-[64vh]'
+           src={item.img} alt="" />
+        </SwiperSlide>
+        })
+      }
+
+      {/* <SwiperSlide className='pb-10 ml-12 max-sm:ml-4 ' >
+        <img  className='h-[62vh]'  src={img1} alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img2} alt="" />
+        <img  className='h-[62vh]' src={img2} alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img3} alt="" />
+        <img className='h-[62vh]'  src={img3} alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img4} alt="" />
-      </SwiperSlide>
+        <img className='h-[62vh]'  src={img4} alt="" />
+      </SwiperSlide> */}
     
     </Swiper>
   )
