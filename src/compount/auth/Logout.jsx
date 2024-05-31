@@ -21,9 +21,12 @@ const selector  = useSelector(state => state.auth.status)
     
     return(
 <>
-<div className="w-full h-96  bg-white text-black">
+<div className="w-full h-96 flex items-center justify-center   bg-white text-black">
 
-<button onClick={logout}> logout</button>
+
+<button className="
+bg-black text-white text-2xl p-10 rounded-xl
+" onClick={logout}> logout</button>
 </div>
 
 </>

@@ -46,7 +46,8 @@ const Avatars = () => {
     const auth = getAuth();
     signOut(auth).then(() => {
     }).catch((error) => {
-      // An error happened.
+      // An error happened
+     console.log(error)
     });
    }
 
@@ -118,7 +119,7 @@ const Avatars = () => {
             <ListItemButton>
               {/* <ListItemText primary="Log out" /> */}
               <button 
-              onClick={logout}
+              onChange={logout}
               > logout</button>
             </ListItemButton>
           </ListItem>

@@ -118,11 +118,7 @@ setNavPostion("")
       authstatus: true
     },
   
-    {
-      name:"logout"
-      ,slug:"/logout",
-      authstatus:authStatus
-    },
+   
     {
       name:"Login"
       ,slug:"/login",

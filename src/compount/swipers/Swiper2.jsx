@@ -39,7 +39,7 @@ export default function Swiper2({view}) {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      {
+      {/* {
         swp2data.map((item,index) =>{
           return  <SwiperSlide
           
@@ -51,8 +51,8 @@ export default function Swiper2({view}) {
         
         </SwiperSlide>
         })
-      }
-      {/* <SwiperSlide className='max-sm:ml-4 '>
+      } */}
+       <SwiperSlide className='max-sm:ml-4 '>
         <img src={swpImg8} alt="" />
       
       </SwiperSlide>
@@ -75,7 +75,7 @@ export default function Swiper2({view}) {
       <SwiperSlide>
         <img src={swpImg11} alt="" />
       
-      </SwiperSlide> */}
+      </SwiperSlide> 
       
     </Swiper>
   )

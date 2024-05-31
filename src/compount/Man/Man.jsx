@@ -49,11 +49,17 @@ const navigate = useNavigate()
     <>
       <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
       <div className="w-full    flex items-center justify-center">
+          <NavLink
+          to='/products'
+          >
+
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
           { storeWeith<900 ?  
-            <video autoPlay loop muted className="h-full w-full" src={index.dHome}></video>
+
+<video autoPlay loop muted className="h-full w-full" src={index.dHome}></video>
             : <video autoPlay loop muted className="h-full w-full"  src={index.mvhome}></video>
           }
+          </NavLink>
         </div>
         <div className="w-100%  pb-10  text-center max-sm:pl-4">
           <h1 className="max-sm:text-start max-sm:w-3/4 text-6xl max-sm:text-4xl font-black">

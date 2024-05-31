@@ -12,6 +12,7 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import imgs from "./index";
+import { useLocation, useParams } from "react-router-dom";
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -163,6 +164,13 @@ function Products() {
     setFilterStyle(!filterStyle);
   };
 
+  const currentlocation = useLocation()
+  const singleItem = ()=>{
+   
+   
+      
+  }
+
   const filterData = () => {
     return dataArry.filter(
       (item) =>
@@ -172,7 +180,6 @@ function Products() {
         (selectedGenders.length === 0 || selectedGenders.includes(item.gender))
     );
   };
-
   const filteredData = filterData();
 
   return (
@@ -284,6 +291,7 @@ function Products() {
                   <div
                     className=" border-red-700 w-[100%]  cursor-pointer"
                     key={index}
+                    onClick={singleItem}
                   >
                     <img src={item.img} alt="" className="w-[100%]" />
                     <div className="text-content pl-2 text-black items-start font-semibold">

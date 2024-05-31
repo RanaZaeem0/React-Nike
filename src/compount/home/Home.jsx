@@ -5,6 +5,9 @@ import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 export default function Home() {
+
+
+
   //  const [swiperview,setSwiperview] = useState('');
 
   //  const dispatch  =useDispatch()
@@ -76,12 +79,15 @@ export default function Home() {
       <div className="w-100% bg-slate-100 max-md:pt-12  pt-4 flex flex-col items-center max-sm:items-center  ">
         <div className="w-full flex items-center justify-center">
           {/* <img className={`h-full`} src={homemg} alt="" /> */}
+          <NavLink to='products'>
+
           { storeWeith >900 ?  
         
-
-            <video autoPlay loop muted className="h-full w-100%" src={index.homeVideo}></video>
-            : <video autoPlay loop muted className="h-full w-100%"  src={index.hMobVi}></video>
-          }
+        
+        <video autoPlay loop muted className="h-full w-100%" src={index.homeVideo}></video>
+        : <video autoPlay loop muted className="h-full w-100%"  src={index.hMobVi}></video>
+      }
+      </NavLink>
         </div>
         <div className="w-10/12 max-sm:text-start   h-[39vh] max-sm:h-[49vh] text-center max-sm:pl-4">
           <h1 className=" text-6xl max-sm:text-4xl  max-sm:text-start font-black">
@@ -108,7 +114,11 @@ export default function Home() {
           view={view}
         />
       </div>
-      <h1 className="text-3xl p-5 font-black max-sm:p-3 ">Featured</h1>
+      <h1 className="text-4xl p-5 font-extrabold max-sm:p-3 ">Featured</h1>
+      <NavLink 
+      to='/products'>
+
+    
       <div className="w-100%   h-5/6  max-sm:gap-10 relative flex max-sm:flex-col  items-center justify-evenly">
         <div
           className="w-[48%]  
@@ -163,7 +173,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      </NavLink>
       <div className="w-100% ">
         <h2 className="font-black text-3xl p-10 max-sm:p-3">Always Iconic</h2>
        <NavLink to='products'> <index.Swiper2 view={view} /></NavLink>
