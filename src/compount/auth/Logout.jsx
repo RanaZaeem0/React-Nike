@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import {logout} from "../../store/authSlice"
 
 function Logout(){
-const dispatch = useDispatch()
-const navigate = useNavigate()
+
+
 const selector  = useSelector(state => state.auth.status)
     const logout = ()=>{
         const auth = getAuth();
