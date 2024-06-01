@@ -13,7 +13,7 @@ const selector  = useSelector(state => state.auth.status)
   console.log(selector)
 
         }).catch((error) => {
-          // An error happened.
+          console.log("error during logout",error);
         });
     }
    
