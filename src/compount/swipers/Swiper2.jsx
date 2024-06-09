@@ -53,27 +53,27 @@ export default function Swiper2({view}) {
         })
       } */}
        <SwiperSlide className='max-sm:ml-4 '>
-        <img src={swpImg8} alt="" />
+        <img src={swpImg8}  alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={swpImg7} alt="" />
+        <img src={swpImg7}   alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={swpImg5} alt="" />
+        <img src={swpImg5}   alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={swpImg6} alt="" />
+        <img src={swpImg6}   alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={swpImg9} alt="" />
+        <img src={swpImg9}   alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={swpImg11} alt="" />
+        <img src={swpImg11}   alt="" />
       
       </SwiperSlide> 
       

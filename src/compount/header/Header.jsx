@@ -30,7 +30,7 @@ import { InputBase, Paper } from "@mui/material";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Avatars from "./Avatars";
-
+import jordenimg from "./nav.png"
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -172,9 +172,11 @@ setNavPostion("")
                 textDecoration: "none",
               }}
             ></Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box 
+          
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <nav
-                className="w-4/5  flex items-end justify-end
+                className="w-4/5   flex items-end justify-end
             
             "
               >
@@ -286,7 +288,7 @@ setNavPostion("")
                 }}
               >
                 <nav
-                  className="w-52 h-18 
+                  className="w-52 h-80 
                 flex items-start px-5 flex-col"
                 >
             {
@@ -305,6 +307,7 @@ setNavPostion("")
                 </NavLink>: null
   ))
 }
+<img  className="h-12 pl-4 mt-5" src={jordenimg} alt="" />
                 </nav>
               </Menu>
             </Box>

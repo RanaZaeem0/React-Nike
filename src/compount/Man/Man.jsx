@@ -48,7 +48,7 @@ const navigate = useNavigate()
   return (
     <>
       <div className="w-100%  pt-4 flex flex-col items-center max-sm:items-center  ">
-      <div className="w-full    flex items-center justify-center">
+      <div className="w-full !p-2   flex items-center justify-center">
           <NavLink
           to='/products'
           >
@@ -120,7 +120,7 @@ const navigate = useNavigate()
       <div className="w-100%   relative flex max-sm:flex-col  items-center justify-evenly pb-10">
         <div
           className="w-[48%] 
-        max-sm:w-[90%] h-3/4  relative "
+        max-sm:w-[90%] h-3/4  m-3 relative "
         >
           <img className="max-sm:h-[100%] h-3/4" src={index.mbox2} alt="" />
           <div

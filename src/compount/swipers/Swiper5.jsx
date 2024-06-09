@@ -34,7 +34,7 @@ export default function Swiper5({view}) {
       onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide className="ml-12 max-sm:ml-4">
-        <img src={img1} alt="" />
+        <img src={img1}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"
@@ -53,7 +53,7 @@ pl-4"
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img2} alt="" />
+        <img src={img2}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"
@@ -72,7 +72,7 @@ pl-4"
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img3} alt="" />
+        <img src={img3}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"
@@ -91,7 +91,7 @@ pl-4"
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img4} alt="" />
+        <img src={img4}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"
@@ -111,7 +111,7 @@ pl-4"
       </SwiperSlide>
 
       <SwiperSlide>
-        <img src={img5} alt="" />
+        <img src={img5}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"
@@ -130,7 +130,7 @@ pl-4"
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img6} alt="" />
+        <img src={img6}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"
@@ -148,7 +148,7 @@ Explore          </button>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img7} alt="" />
+        <img src={img7}   alt="" />
         <div
           className=" absolute  text-white bottom-2
 pl-4"

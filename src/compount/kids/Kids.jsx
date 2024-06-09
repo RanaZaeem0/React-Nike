@@ -16,10 +16,10 @@ export default function Kids() {
   const detectSize = () => {
     setstoreWeith(window.innerWidth);
     if (window.innerWidth < 960) {
-      setHomeImg(index.mHome);
+      setHomeImg(index.mobileImg);
       setView(1.4);
     } else {
-      setHomeImg(index.homeImg);
+      setHomeImg(index.dhome);
       setView(3.2);
     }
   };
@@ -35,12 +35,12 @@ export default function Kids() {
 
   return (
     <>
-      <div className="w-100% flex flex-col items-center max-sm:items-start   ">
+      <div className="w-100% flex flex-col items-center max-sm:items-start  p-4 ">
         <div className="w-100% flex items-center justify-center">
           <img
             className={`
           `}
-            src={index.dhome}
+            src={homemg}
             alt=""
           />
         </div>
@@ -122,7 +122,7 @@ export default function Kids() {
           </div>
           </div>
 
-          <div className="w-100% h-[90vh] max-sm:h-[65vh] max-lg:h-[65vh] relative -top-16 max-sm:top-0 ">
+          <div className="w-100% h-[90vh] max-sm:h-[75vh] max-lg:h-[65vh] relative -top-16 max-sm:top-0 ">
             <img className="h-11/12 " src={index.img4} alt="" />
             <div
             className="flex flex-col
@@ -145,9 +145,9 @@ export default function Kids() {
       </div>
       {/* Forth swiper */}
 
-   <h2 className="font-semibold text-[26px] p-10">Popular Right Now </h2>
+   <h2 className="font-extrabold text-[26px] max-sm:pt-16 m-1 ">Popular Right Now </h2>
       <Swiper4 view={view} />
-      <h1 className="text-3xl p-5 font-semibold ">Featured</h1>
+      <h1 className="text-3xl p-5 font-extrabold ">Featured</h1>
       <div className="w-100%   h-5/6  max-sm:gap-10 relative flex max-sm:flex-col  items-center justify-evenly">
         <div
           className="w-[48%]  
@@ -203,8 +203,8 @@ export default function Kids() {
         </div>
       </div>
       <h2
-          className="p-10
-        text-2xl font-semibold"
+          className="p-8
+        text-2xl font-extrabold "
         >
           Shop the Essentails{" "}
         </h2>
@@ -234,7 +234,7 @@ export default function Kids() {
 
         }
 
-<h2 className="font-semibold text-3xl p-10">Always Iconic</h2>
+<h2 className="font-extrabold text-3xl p-10">Always Iconic</h2>
         <NavLink to='products'>
         <Swiper2 view={view}/></NavLink>
 

@@ -29,34 +29,34 @@ export default function Swiper3({img1,img2,img3,img4
       onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide className='pb-10 ml-12 max-sm:ml-4'>
-        <img src={img1} alt="" />
+        <img src={img1}  alt="" />
         <h2 className='pl-6 text-xl font-semibold'>Basketball</h2>
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img2} alt="" />
+        <img src={img2}  alt="" />
       <h2 className='pl-6 text-lg font-semibold'>Running</h2>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img3} alt="" />
+        <img src={img3}  alt="" />
       <h2 className='pl-6 text-lg font-semibold'>Training</h2>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img4} alt="" />
+        <img src={img4}  alt="" />
         <h2 className='pl-6 text-lg font-semibold'>Soccer</h2>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img5} alt="" />
+        <img src={img5}  alt="" />
         <h2 className='pl-6 text-lg font-semibold'>Golf</h2>
       </SwiperSlide>
 
     
       <SwiperSlide>
-        <img src={img6} alt="" />
+        <img src={img6}  alt="" />
         <h2 className='pl-6 text-lg font-semibold'>Tennis</h2>
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img7} alt="" />
+        <img src={img7}  alt="" />
         <h2 className='pl-6 text-lg font-semibold'>Football</h2>
       </SwiperSlide>
     

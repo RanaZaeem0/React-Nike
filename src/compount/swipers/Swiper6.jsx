@@ -33,15 +33,15 @@ export default function Swiper1({view,img1,img2,img3}) {
       onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide className=''>
-        <img src={img1} alt="" />
+        <img className='h-80' src={img1} alt="" />
       
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img2} alt="" />
+        <img className='h-80' src={img2} alt="" />
       
       </SwiperSlide>
       <SwiperSlide className="" >
-        <img src={img3} alt="" />
+        <img className='h-80' src={img3} alt="" />
       </SwiperSlide>
  
     
