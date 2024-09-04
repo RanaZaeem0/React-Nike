@@ -18,6 +18,8 @@ import Products from "./compount/products/Products.jsx";
 import Woman from "./compount/Woman.jsx";
 import Man from "./compount/Man/Man.jsx";
 import Home from "./compount/home/Home.jsx";
+
+import { Dashboard } from "./compount/products/store/Dashborad.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         path: "/woman",

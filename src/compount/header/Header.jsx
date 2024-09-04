@@ -148,6 +148,7 @@ setNavPostion("")
       </div>
       <AppBar
         position={navPostion}
+        style={{boxShadow:"0 0 4px -3px black;"}}
         className="
      shadow-none "
       >

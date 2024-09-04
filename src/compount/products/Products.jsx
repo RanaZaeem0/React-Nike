@@ -82,6 +82,7 @@ let dataArry = [
   },
   {
     img: imgs.img5,
+    priceFilter: "30-100$",
     shoesName: "Under Armour HOVR",
     Category: "Basketball shoes",
     prices: "135$",
@@ -174,8 +175,7 @@ function Products() {
   const filterData = () => {
     return dataArry.filter(
       (item) =>
-        (selectedPrice.length === 0 ||
-          selectedPrice.includes(item.priceFilter)) &&
+        (selectedPrice.length === 0 || selectedPrice.includes(item.priceFilter)) &&
         (selectedColors.length === 0 || selectedColors.includes(item.color)) &&
         (selectedGenders.length === 0 || selectedGenders.includes(item.gender))
     );
@@ -282,7 +282,7 @@ function Products() {
         </div>
 
         <div className="product 
-        ml-[20%] max-md:ml-0 max-lg:w-full  w-[80%] max-md:w-full border-1px grid grid-cols-1  gap-10 h-screen overflow-y-scroll scroll-smooth">
+        ml-[20%] max-md:ml-0 max-lg:w-full  w-[80%] max-md:w-full border-1px grid grid-cols-1  gap-10 h-screen overflow-y-scroll scroll-smooth ">
           <Box my={4}>
             <Typography variant="h6">Best Collection</Typography>
             <div  className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-2  gap-5 justify-around">
